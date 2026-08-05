@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="NCR Solutions accompagne les professionnels à Fréjus et dans le Var : création de sites internet, assistance informatique, community management et formations.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="NCR Solutions Fréjus | Web, Informatique &amp; Formations">
+    <meta property="og:description" content="NCR Solutions accompagne les professionnels à Fréjus et dans le Var : création de sites internet, assistance informatique, community management et formations.">
+    <meta property="og:url" content="https://ncr-solutions.fr/">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NCR Solutions Fréjus | Web, Informatique &amp; Formations">
+    <meta name="twitter:description" content="NCR Solutions accompagne les professionnels à Fréjus et dans le Var : création de sites internet, assistance informatique, community management et formations.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+    
+    <title>NCR Solutions Fréjus | Web, Informatique &amp; Formations</title>
+<link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
+    <link rel="shortcut icon" href="favicon.png?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* —————————————————————————————————————————————————————————————
+           DESIGN SYSTÈME GLOBAL : ULTRA-PREMIUM & LENIS
+           ————————————————————————————————————————————————————————————— */
+
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        html, body {
+            width: 100%; max-width: 100vw;
+            overflow-x: hidden !important;
+        }
+
+        * { box-sizing: border-box !important; }
+
+        :root {
+            --bg-global: #fbfbfd;
+            --text-main: #1d1d1f;
+            --text-dim: #515154;
+            --card-bg: #ffffff;
+            --card-border: rgba(0, 0, 0, 0.04);
+            --accent: #2997ff;
+            --premium-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            --radius-large: 40px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-global: #000000;
+                --text-main: #f5f5f7;
+                --text-dim: #a1a1a6;
+                --card-bg: #1c1c1e;
+                --card-border: rgba(255, 255, 255, 0.08);
+                --premium-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-global) !important;
+            color: var(--text-main) !important;
+            margin: 0;
+            display: flex; flex-direction: column; min-height: 100vh;
+        }
+
+        ::selection { background: rgba(41, 151, 255, 0.15); color: var(--text-main); }
+
+        /* PRELOADER CINÉMATIQUE */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #000000; z-index: 99999;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .preloader-logo-img {
+            height: 120px; width: auto;
+            filter: brightness(0) invert(1); 
+            opacity: 0; transform: scale(0.9);
+        }
+
+        /* HEADER */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        @media (prefers-color-scheme: dark) { header { background: rgba(20, 20, 22, 0.85); } }
+
+        /* —————————————————————————————————————————————————————————————
+           HERO SECTION : BULLES & CURSEUR MAGNÉTIQUE (FOND CLAIR)
+           ————————————————————————————————————————————————————————————— */
+        .hero-gsap-container {
+            position: relative;
+            width: 100%;
+            height: 85vh; 
+            background-color: var(--bg-global);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(41, 151, 255, 0.1) 0%, var(--bg-global) 70%);
+            border-radius: 0 0 50px 50px; 
+            margin-bottom: 80px;
+        }
+        @media (prefers-color-scheme: dark) { 
+            .hero-gsap-container { background: radial-gradient(circle at center, rgba(41, 151, 255, 0.15) 0%, #000000 70%); } 
+        }
+
+        .hero-gsap-title { text-align: center; z-index: 2; pointer-events: none; }
+        
+        .hero-gsap-title h1 {
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            font-weight: 900; letter-spacing: -3px; line-height: 1.05;
+            margin: 0 0 20px 0;
+            color: var(--text-main);
+        }
+        .hero-gsap-title h1 span { color: var(--accent); }
+
+        .hero-gsap-title p {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--text-dim); font-weight: 300;
+            max-width: 600px; margin: 0 auto;
+        }
+
+        /* Bulles Glassmorphism Ultra-Design (Adaptées fond clair) */
+        .bubble {
+            position: absolute;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 50px;
+            font-size: 1.15rem; font-weight: 600;
+            color: var(--text-main);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            display: flex; align-items: center; gap: 12px;
+            z-index: 3; opacity: 0; transform: scale(0.8);
+            will-change: transform, opacity;
+        }
+        @media (prefers-color-scheme: dark) {
+            .bubble { background: rgba(255, 255, 255, 0.05); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        }
+
+        #b-web { top: 15%; left: 12%; }
+        #b-cm { top: 22%; right: 12%; }
+        #b-it { bottom: 20%; left: 15%; }
+        #b-form { bottom: 15%; right: 10%; }
+
+        .dot {
+            width: 10px; height: 10px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(41, 151, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Le faux curseur autonome (Noir sur fond clair pour bien ressortir) */
+        .fake-cursor {
+            position: absolute;
+            width: 45px; height: 45px; z-index: 100; pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.42c.45 0 .67-.54.35-.85L6.35 3.35a.5.5 0 0 0-.85.35z" fill="%23000000" stroke="%23FFFFFF" stroke-width="1.5"/></svg>');
+            background-repeat: no-repeat; background-size: contain;
+            top: 110%; left: 110%;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+            opacity: 0; will-change: transform;
+        }
+        @media (prefers-color-scheme: dark) {
+            .fake-cursor { background-image: url('data:image/svg+xml;utf8,<svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.42c.45 0 .67-.54.35-.85L6.35 3.35a.5.5 0 0 0-.85.35z" fill="%23FFFFFF" stroke="%23000000" stroke-width="1.5"/></svg>'); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6)); }
+        }
+
+        /* État cliqué par le curseur */
+        .bubble.active-click {
+            background: var(--accent); border-color: var(--accent);
+            transform: scale(1.1) !important;
+            box-shadow: 0 0 40px rgba(41, 151, 255, 0.4);
+            color: #ffffff;
+        }
+        .bubble.active-click .dot { background-color: #fff; box-shadow: none; }
+
+        /* BOUTON GLOBAL */
+        .btn-primary {
+            display: inline-block; background: var(--text-main); color: var(--bg-global);
+            padding: 18px 45px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-top: -40px; position: relative; z-index: 10;
+        }
+        .btn-primary:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        @media (prefers-color-scheme: dark) { .btn-primary { box-shadow: 0 10px 20px rgba(255,255,255,0.1); } .btn-primary:hover { box-shadow: 0 15px 30px rgba(255,255,255,0.2); } }
+
+        /* —————————————————————————————————————————————————————————————
+           SUITE DU SITE : BENTO GRID & MÉTHODOLOGIE (STYLE APPLE)
+           ————————————————————————————————————————————————————————————— */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .section-header { text-align: center; margin-bottom: 60px; margin-top: 80px; }
+        .section-header h2 { font-size: 3rem; font-weight: 900; letter-spacing: -1.5px; margin: 0; }
+        .badge { display: inline-block; padding: 6px 14px; border-radius: 8px; background: rgba(41, 151, 255, 0.1); color: var(--accent); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: auto auto;
+            gap: 25px; margin-bottom: 120px;
+        }
+
+        .bento-item {
+            position: relative; background: var(--card-bg); border: 1px solid var(--card-border);
+            border-radius: var(--radius-large); padding: 50px; box-shadow: var(--premium-shadow);
+            overflow: hidden; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .bento-web { grid-column: 1 / -1; min-height: 350px; background: radial-gradient(circle at top right, rgba(41, 151, 255, 0.05), var(--card-bg) 60%); }
+        .bento-cm { grid-column: 1 / 2; min-height: 300px; }
+        .bento-formation { grid-column: 2 / 3; min-height: 300px; }
+
+        .bento-item::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(41, 151, 255, 0.06), transparent 40%);
+            z-index: 0; opacity: 0; transition: opacity 0.5s ease; pointer-events: none;
+        }
+        .bento-item:hover::before { opacity: 1; }
+        .bento-content { position: relative; z-index: 1; }
+        
+        .bento-tag { color: var(--accent); font-weight: 800; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .bento-item h3 { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin: 0 0 15px 0; color: var(--text-main); }
+        .bento-item p { font-size: 1.15rem; color: var(--text-dim); line-height: 1.6; margin: 0; }
+        .bento-icon { width: 48px; height: 48px; margin-bottom: 30px; stroke: var(--text-main); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* Méthodologie N.C.R */
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 120px; }
+        .method-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 32px; padding: 45px 35px; box-shadow: var(--premium-shadow); transition: transform 0.4s ease; }
+        .method-card:hover { transform: translateY(-10px); }
+        .method-number { color: var(--accent); font-size: 3.5rem; font-weight: 900; line-height: 1; margin: 0 0 20px 0; }
+        .method-card h4 { font-size: 1.6rem; font-weight: 800; margin: 0 0 15px 0; letter-spacing: -0.5px; }
+        .method-card p { font-size: 1.05rem; color: var(--text-dim); line-height: 1.7; margin: 0; }
+
+        /* Avis */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .testimonial-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 32px; padding: 40px; }
+        .testimonial-card p { font-style: italic; font-size: 1.15rem; color: var(--text-dim); line-height: 1.7; margin: 0 0 30px 0; }
+        .testimonial-author strong { display: block; font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
+        .testimonial-author span { font-size: 0.9rem; color: #888; }
+
+        /* RESPONSIVE MOBILE FIXES */
+        @media (max-width: 768px) {
+            .hero-gsap-container { 
+                height: auto !important; min-height: 85vh; 
+                padding: 120px 15px 80px 15px !important; 
+                border-radius: 0 0 30px 30px !important;
+            }
+            .bubble { 
+                position: relative !important; margin: 0 auto 15px auto !important; 
+                top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; 
+                width: 100% !important; max-width: 300px !important; 
+            }
+            .fake-cursor { display: none !important; }
+            .btn-primary { margin-top: 20px; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-web, .bento-cm, .bento-formation { grid-column: 1 / -1; padding: 35px; min-height: auto; }
+            .bento-item h3 { font-size: 1.8rem; }
+            .method-card { padding: 35px; }
+        }
+    </style>
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ncr-solutions.fr/#webpage",
+      "url": "https://ncr-solutions.fr/",
+      "name": "NCR Solutions à Fréjus",
+      "description": "NCR Solutions accompagne les professionnels à Fréjus et dans le Var : création de sites internet, assistance informatique, community management et formations.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <div id="preloader">
+        <img src="logo.png" alt="N.C.R Solutions" class="preloader-logo-img">
+    </div>
+
+    <header class="gsap-header">
+        <a href="/" class="logo-container" style="display:flex; align-items:center; gap:12px;">
+            <img src="logo.png" alt="Logo N.C.R" style="height:40px;">
+            <div class="logo-text" style="font-weight:900; font-size:1.2rem; letter-spacing:-0.5px;">N.C.R<span> SOLUTIONS</span></div>
+        </a>
+        <nav style="display: flex; gap: 20px;">
+            <a href="/" style="color: var(--accent) !important; font-weight: 600;">Accueil</a>
+            <a href="solutions-digitales.html">Solutions Digitales</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="formations.html">Formations</a>
+            <a href="impact.html">Impact</a>
+            <a href="a-propos.html">À Propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-gsap-container">
+            <div class="hero-gsap-title">
+                <h1>L'excellence terrain<br><span>Simplement</span></h1>
+                <p></p>
+            </div>
+
+            <div class="bubble" id="b-web">
+                <div class="dot"></div>Création Web Premium
+            </div>
+            <div class="bubble" id="b-cm">
+                <div class="dot"></div>Community Management
+            </div>
+            <div class="bubble" id="b-it">
+                <div class="dot"></div>Assistance Informatique
+            </div>
+            <div class="bubble" id="b-form">
+                <div class="dot"></div>Formations B2B & SST
+            </div>
+
+            <div class="fake-cursor"></div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="#expertises" class="btn-primary">Découvrir l'écosystème</a>
+        </div>
+
+        <div class="container" id="expertises">
+            
+            <div class="section-header gsap-fade">
+                <div class="badge">Notre Écosystème</div>
+                <h2>Tout pour performer</h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-top: 15px;">Les outils et compétences dont votre entreprise a besoin pour rayonner.</p>
+            </div>
+
+            <div class="bento-grid">
+                <a href="creation-site-internet.html" class="bento-item bento-web gsap-bento">
+                    <div class="bento-content">
+                        <svg class="bento-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        <span class="bento-tag">Développement Sur-Mesure</span>
+                        <h3>Création de Site Web</h3>
+                        <p>Des plateformes vitrines et e-commerce taillées pour la performance. Design épuré, code optimisé et hébergement sécurisé pour convertir vos visiteurs en clients.</p>
+                    </div>
+                </a>
+                <a href="community-management.html" class="bento-item bento-cm gsap-bento">
+                    <div class="bento-content">
+                        <svg class="bento-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        <span class="bento-tag">Visibilité & Stratégie</span>
+                        <h3>Community Management</h3>
+                        <p>Prenez le contrôle de votre image de marque. Stratégie éditoriale, création de contenu et animation sur les réseaux.</p>
+                    </div>
+                </a>
+                <a href="formations.html" class="bento-item bento-formation gsap-bento">
+                    <div class="bento-content">
+                        <svg class="bento-icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <span class="bento-tag">Montée en compétence</span>
+                        <h3>Formations Pro</h3>
+                        <p>Parcours sur-mesure pour maîtriser vos outils numériques, perfectionner votre communication et gérer les litiges.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="section-header gsap-fade">
+                <div class="badge">Notre ADN</div>
+                <h2>La méthode N.C.R.</h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-top: 15px;">Une approche structurée pour des résultats concrets.</p>
+            </div>
+
+            <div class="method-grid">
+                <div class="method-card gsap-method">
+                    <div class="method-number">01</div>
+                    <h4>Diagnostic</h4>
+                    <p>Analyse précise de vos besoins, de vos outils actuels et de vos enjeux terrain. L'objectif est de comprendre votre écosystème pour construire une stratégie sur-mesure.</p>
+                </div>
+                <div class="method-card gsap-method">
+                    <div class="method-number">02</div>
+                    <h4>Immersion</h4>
+                    <p>Mise en place des solutions digitales ou animations de formations avec des cas pratiques inspirés de votre quotidien. Nous travaillons sur le concret.</p>
+                </div>
+                <div class="method-card gsap-method">
+                    <div class="method-number">03</div>
+                    <h4>Impact</h4>
+                    <p>Suivi technique post-livraison ou accompagnement dans l'application des compétences acquises pour garantir des résultats visibles, mesurables et durables.</p>
+                </div>
+            </div>
+
+            <div class="section-header gsap-fade">
+                <h2>Ils nous font confiance</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card gsap-fade">
+                    <p>"Nacer comprend les galères du quotidien. Que ce soit pour la refonte de notre site ou la formation de l'équipe, on est repartis avec des outils qu'on a utilisés dès le lendemain."</p>
+                    <div class="testimonial-author">
+                        <strong>Marc D.</strong>
+                        <span>Responsable Logistique</span>
+                    </div>
+                </div>
+                <div class="testimonial-card gsap-fade">
+                    <p>"Le sur-mesure n'est pas qu'un mot ici. Le site web reflète parfaitement notre identité et la formation nous a fait gagner un temps immense sur la gestion des tâches administratives."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah L.</strong>
+                        <span>Directrice d'agence immobilière</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 120px;" class="gsap-fade">
+                <a href="impact.html" style="color: var(--accent); font-weight: 700; text-decoration: none; font-size: 1.15rem; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    Découvrir tous les cas clients →
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <h2 style="font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -1px;">N.C.R Solutions</h2>
+                <p>Création de site web, assistance informatique, gestion de réseaux sociaux et formations professionnelles à Fréjus et dans le Var.</p>
+                <div class="footer-pill">Expert Digital • France</div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <a href="formation1.html">Communication digitale</a>
+                    <a href="formation2.html">Outils numériques</a>
+                    <a href="formation3.html">Gestion des litiges</a>
+                    <a href="formation-reseaux.html">Réseaux sociaux</a>
+                    <a href="accompagnement-ponctuel.html">Accompagnement</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                    <a href="cgu.html">CGU</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+            <div class="contact-bar">
+                <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/></svg>
+                </a>
+                <a href="tel:+33621972139" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+                </a>
+                <a href="mailto:ncr-formations@outlook.fr" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+            <span class="footer-meta">Designed with precision & simplicity</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // 1. Initialisation Smooth Scroll (Lenis)
+        const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // 2. Preloader & Lancement GSAP
+        window.addEventListener('load', () => {
+            const tlPreloader = gsap.timeline({
+                onComplete: () => {
+                    document.getElementById('preloader').style.display = 'none';
+                    initHeroAnimations();
+                    initScrollAnimations();
+                }
+            });
+
+            tlPreloader
+                .to('.preloader-logo-img', { opacity: 1, scale: 1, duration: 1, ease: "power3.out" })
+                .to({}, { duration: 0.4 })
+                .to('.preloader-logo-img', { scale: 3, opacity: 0, duration: 1, ease: "power2.inOut" })
+                .to('#preloader', { yPercent: -100, duration: 1.2, ease: "expo.inOut" }, "-=0.6");
+        });
+
+        // 3. Animation de la vitrine technique (Bulles & Curseur)
+        function initHeroAnimations() {
+            // Apparition des bulles
+            gsap.to('.bubble', { opacity: 1, scale: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.7)" });
+
+            // Flottaison naturelle
+            gsap.utils.toArray('.bubble').forEach(bubble => {
+                gsap.to(bubble, {
+                    y: "random(-15, 15)", x: "random(-10, 10)",
+                    duration: "random(2.5, 4)", repeat: -1, yoyo: true, ease: "sine.inOut"
+                });
+            });
+
+            // Curseur Magnétique Intelligent (Seulement sur grand écran)
+            if (window.innerWidth > 768) {
+                const cursor = document.querySelector('.fake-cursor');
+                gsap.to(cursor, { opacity: 1, duration: 0.5, delay: 1 });
+
+                function getCenter(element) {
+                    const rect = element.getBoundingClientRect();
+                    return { x: rect.left + rect.width / 2 + window.scrollX, y: rect.top + rect.height / 2 + window.scrollY };
+                }
+
+                const tl = gsap.timeline({ repeat: -1, repeatDelay: 1.5, delay: 1 });
+                tl.set(cursor, { x: window.innerWidth, y: window.innerHeight })
+                  .to({}, { duration: 0.5 }) 
+
+                  // Clic Bulle 1
+                  .to(cursor, { x: () => getCenter(document.querySelector('#b-web')).x, y: () => getCenter(document.querySelector('#b-web')).y, duration: 1.2, ease: "power2.inOut" })
+                  .to(cursor, { scale: 0.8, duration: 0.1 })
+                  .call(() => document.querySelector('#b-web').classList.add('active-click'))
+                  .to(cursor, { scale: 1, duration: 0.1 })
+                  .to({}, { duration: 0.7 })
+                  .call(() => document.querySelector('#b-web').classList.remove('active-click'))
+
+                  // Clic Bulle 2
+                  .to(cursor, { x: () => getCenter(document.querySelector('#b-cm')).x, y: () => getCenter(document.querySelector('#b-cm')).y, duration: 1.2, ease: "power2.inOut" })
+                  .to(cursor, { scale: 0.8, duration: 0.1 })
+                  .call(() => document.querySelector('#b-cm').classList.add('active-click'))
+                  .to(cursor, { scale: 1, duration: 0.1 })
+                  .to({}, { duration: 0.7 })
+                  .call(() => document.querySelector('#b-cm').classList.remove('active-click'))
+
+                  // Sortie écran
+                  .to(cursor, { x: window.innerWidth + 50, y: window.innerHeight + 50, duration: 1.5, ease: "power2.in" });
+            }
+        }
+
+        // 4. Animations au défilement
+        function initScrollAnimations() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.utils.toArray('.gsap-fade').forEach(elem => {
+                gsap.from(elem, { scrollTrigger: { trigger: elem, start: "top 85%" }, y: 30, opacity: 0, duration: 1, ease: "power3.out" });
+            });
+
+            gsap.from(".gsap-bento", { scrollTrigger: { trigger: ".bento-grid", start: "top 80%" }, y: 50, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out" });
+            gsap.from(".gsap-method", { scrollTrigger: { trigger: ".method-grid", start: "top 85%" }, y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" });
+        }
+
+        // 5. Effet Spotlight sur les Bento
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mousemove', e => {
+                const rect = item.getBoundingClientRect();
+                const x = e.clientX - rect.left; const y = e.clientY - rect.top;
+                item.style.setProperty('--mouse-x', `${x}px`);
+                item.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>

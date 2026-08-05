@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="Création de sites internet, community management et assistance informatique à Fréjus, Saint-Raphaël, Puget-sur-Argens et dans le Var.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/solutions-digitales.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="Solutions digitales à Fréjus | NCR Solutions">
+    <meta property="og:description" content="Création de sites internet, community management et assistance informatique à Fréjus, Saint-Raphaël, Puget-sur-Argens et dans le Var.">
+    <meta property="og:url" content="https://ncr-solutions.fr/solutions-digitales.html">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solutions digitales à Fréjus | NCR Solutions">
+    <meta name="twitter:description" content="Création de sites internet, community management et assistance informatique à Fréjus, Saint-Raphaël, Puget-sur-Argens et dans le Var.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+<title>Solutions digitales à Fréjus | NCR Solutions</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* —————————————————————————————————————————————————————————————
+           DESIGN CLAIR ET IMPARABLE (PLUS DE TRANSPARENCE CONFLIT)
+           ————————————————————————————————————————————————————————————— */
+        
+        :root {
+            --premium-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            --premium-radius: 28px;
+            --accent: #2997ff;
+            --accent-glow: rgba(41, 151, 255, 0.4);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            background-color: #fbfbfd !important; /* Force le fond clair */
+            color: #1d1d1f !important;            /* Force le texte sombre lisible */
+            overflow-x: hidden;
+            position: relative;
+        }
+
+         /* 1. On donne un nom au conteneur du circuit pour pouvoir agir dessus */
+.circuit-bg-container {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 1 !important;
+    pointer-events: none;
+    opacity: 0.8;
+    /* On applique un masque qui rend le circuit transparent derrière le texte */
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%);
+}
+
+
+        .circuit-line {
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 1;
+            opacity: 0.15; 
+        }
+
+        .data-flow {
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 6px var(--accent-glow));
+            stroke-dasharray: 20 500; 
+            stroke-dashoffset: 1000;
+        }
+
+        .circuit-node {
+            fill: var(--accent);
+            opacity: 0.2;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 40px;
+        }
+
+        /* GRILLE DE FORCE ET SÉCURITÉ VISUELLE */
+        .premium-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important; 
+            gap: 40px !important;
+            perspective: 1000px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .premium-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 768px) {
+            .premium-grid { grid-template-columns: 1fr !important; }
+        }
+
+        /* FORÇAGE BLANC TOTAL POUR TOUTES LES CARTES */
+        .premium-card {
+    background-color: #ffffff !important; /* Blanc pur */
+    border: 2px solid rgba(0, 0, 0, 0.1) !important; /* Bordure bien distincte */
+    border-radius: 28px !important;
+    padding: 45px 35px !important;
+    
+    /* Ombre renforcée pour décoller la carte du fond */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12) !important; 
+    
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 380px !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Effet interactif au survol */
+.premium-card:hover {
+    transform: translateY(-10px) scale(1.02) !important; /* Monte de 10px et grossit */
+    border-color: #2997ff !important; /* Devient bleue au survol */
+    box-shadow: 0 40px 80px rgba(41, 151, 255, 0.2) !important; /* Ombre bleue lumineuse */
+}
+
+        /* TEXTES INTERNES FORCÉS EN SOMBRE */
+        .premium-card h3 {
+            color: #1d1d1f !important;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .premium-card p.text-dim {
+            color: #515154 !important; /* Gris foncé textuel ultra lisible */
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .badge {
+            background: rgba(41, 151, 255, 0.1) !important;
+            color: var(--accent) !important;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        /* ==========================================================================
+   FIX MAGIQUE 1 : HEADER & NAV EN MODE SOMBRE
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+    /* Fond du bandeau bien sombre */
+    header {
+        background: rgba(20, 20, 22, 0.95) !important;
+    }
+    
+    /* Force le texte du logo et de la navigation en blanc */
+    header a, 
+    header nav a, 
+    header .logo-text, 
+    header .ncr-logo-text {
+        color: #ffffff !important;
+    }
+    
+    /* Préserve le bleu de "SOLUTIONS" */
+    header .logo-text span, 
+    header .ncr-logo-text span {
+        color: #2997ff !important;
+    }
+}
+
+    </style>
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ncr-solutions.fr/solutions-digitales.html#webpage",
+      "url": "https://ncr-solutions.fr/solutions-digitales.html",
+      "name": "Solutions digitales à Fréjus",
+      "description": "Création de sites internet, community management et assistance informatique à Fréjus, Saint-Raphaël, Puget-sur-Argens et dans le Var.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      },
+      "breadcrumb": {
+        "@id": "https://ncr-solutions.fr/solutions-digitales.html#breadcrumb"
+      },
+      "about": {
+        "@id": "https://ncr-solutions.fr/solutions-digitales.html#main-entity"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://ncr-solutions.fr/solutions-digitales.html#main-entity",
+      "name": "Solutions digitales à Fréjus",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://ncr-solutions.fr/creation-site-internet.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://ncr-solutions.fr/community-management.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://ncr-solutions.fr/assistance-informatique.html"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ncr-solutions.fr/solutions-digitales.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://ncr-solutions.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Solutions digitales à Fréjus",
+          "item": "https://ncr-solutions.fr/solutions-digitales.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <div class="circuit-bg-container">
+        <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <path class="circuit-line" d="M -100 150 L 200 150 L 250 200 L 400 200 L 450 150 L 800 150 L 900 250 L 1100 250 L 1150 200 L 1500 200" />
+            <path class="circuit-line" d="M -50 400 L 150 400 L 250 500 L 600 500 L 650 450 L 900 450 L 1000 550 L 1500 550" />
+            <path class="circuit-line" d="M 200 -50 L 200 150 M 400 200 L 400 400 M 800 150 L 800 350 L 850 400 L 1200 400" />
+            <path class="circuit-line" d="M 600 500 L 600 850 M 1100 250 L 1100 600 L 1050 650 L 800 650" />
+
+            <path class="data-flow flow-1" d="M -100 150 L 200 150 L 250 200 L 400 200 L 450 150 L 800 150 L 900 250 L 1100 250 L 1150 200 L 1500 200" />
+            <path class="data-flow flow-2" d="M -50 400 L 150 400 L 250 500 L 600 500 L 650 450 L 900 450 L 1000 550 L 1500 550" />
+            <path class="data-flow flow-3" d="M 200 -50 L 200 150 L 400 200 L 400 400 L 600 500 L 600 850" />
+            
+            <circle class="circuit-node node-pulse" cx="200" cy="150" r="4" />
+            <circle class="circuit-node node-pulse" cx="400" cy="200" r="4" />
+            <circle class="circuit-node node-pulse" cx="800" cy="150" r="5" />
+            <circle class="circuit-node node-pulse" cx="600" cy="500" r="6" />
+            <circle class="circuit-node node-pulse" cx="1100" cy="250" r="4" />
+        </svg>
+    </div>
+
+    <header class="gsap-header">
+        <a href="/" class="logo-container">
+            <img src="logo.png" alt="Logo N.C.R" class="logo-img">
+            <div class="logo-text">N.C.R<span> SOLUTIONS</span></div>
+        </a>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="solutions-digitales.html" style="color: var(--accent); font-weight: 600;">Solutions Digitales</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="formations.html">Formations</a>
+            <a href="impact.html">Impact</a>
+            <a href="a-propos.html">À Propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main style="flex: 1; padding: 0 20px;">
+        <div class="container" style="padding-top: 80px; padding-bottom: 120px; max-width: 1400px; margin: 0 auto;">
+            
+            <div class="hero-section" style="text-align: center; margin-bottom: 80px;">
+                <h1 class="gsap-title" style="font-size: clamp(3rem, 8vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; color: #1d1d1f;">
+                    Écosystème <br> <span style="color: var(--accent);">Digital Intégral</span>
+                </h1>
+                <p class="gsap-subtitle" style="font-size: 1.25rem; max-width: 650px; margin: 0 auto; line-height: 1.6; color: #515154;">
+                    Nous concevons, animons et sécurisons votre présence numérique à Fréjus et dans le Var. Un accompagnement de A à Z adapté à votre marché.
+                </p>
+            </div>
+            
+            <div class="premium-grid">
+                
+                <a href="creation-site-internet.html" class="premium-card gsap-card" style="background: #ffffff !important; opacity: 1 !important; visibility: visible !important;">
+                    <div>
+                        <div class="badge">Performance</div>
+                        <h3>Création de Site Internet</h3>
+                        <p class="text-dim">
+                            Développement de sites vitrines et e-commerce sur-mesure. Un design immersif pensé pour convertir vos visiteurs en clients fidèles.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px; font-weight: 800; color: var(--accent); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        À partir de 790€ HT 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+                <a href="community-management.html" class="premium-card gsap-card" style="background: #ffffff !important; opacity: 1 !important; visibility: visible !important;">
+                    <div>
+                        <div class="badge">Visibilité</div>
+                        <h3>Community Management</h3>
+                        <p class="text-dim">
+                            Stratégie de contenu, animation de vos réseaux sociaux et modération. Nous créons une communauté engagée autour de votre marque.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px; font-weight: 800; color: var(--accent); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        Forfait dès 249€ HT/mois
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+                <a href="assistance-informatique.html" class="premium-card gsap-card" style="background: #ffffff !important; opacity: 1 !important; visibility: visible !important;">
+                    <div>
+                        <div class="badge">Sécurité</div>
+                        <h3>Assistance Informatique</h3>
+                        <p class="text-dim">
+                            Intervention rapide, maintenance de votre parc informatique et sécurisation de vos données. Gardez l'esprit libre.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px; font-weight: 800; color: var(--accent); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        Interventions dès 49€ HT
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+
+  <div class="footer-bg"></div>
+
+  <div class="footer-wrapper">
+
+    <div class="footer-brand">
+      <h2 style="font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -1px;">N.C.R Solutions</h2>
+      <p>
+        Formations professionnelles & solutions digitales pour entreprises modernes.
+        Nous aidons les structures à monter en compétence et en performance.
+      </p>
+
+      <div class="footer-pill">
+        Training partner • France
+      </div>
+    </div>
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="/">Accueil</a>
+                    <a href="portfolio.html">Portfolio</a>
+        <a href="formations.html">Formations</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <a href="formation1.html">Communication digitale</a>
+        <a href="formation2.html">Outils numériques</a>
+        <a href="formation3.html">Gestion des litiges</a>
+        <a href="formation-reseaux.html">Réseaux sociaux</a>
+        <a href="accompagnement-ponctuel.html">Accompagnement</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="cgu.html">CGU</a>
+        <a href="cgv.html">CGV</a>
+     </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+    <div class="contact-bar">
+
+  <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-item">
+
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/>
+    </svg>
+
+  </a>
+
+  <a href="tel:+33621972139" class="contact-item">
+
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
+    </svg>
+
+  </a>
+
+  <a href="mailto:ncr-formations@outlook.fr" class="contact-item">
+
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+
+  </a>
+
+</div>
+    <span class="footer-meta">Designed with precision & simplicity</span>
+  </div>
+
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animation circuit
+        gsap.to(".flow-1", { strokeDashoffset: 0, duration: 8, ease: "none", repeat: -1 });
+        gsap.to(".flow-2", { strokeDashoffset: 0, duration: 12, ease: "none", repeat: -1, delay: 1 });
+        gsap.to(".flow-3", { strokeDashoffset: 0, duration: 6, ease: "none", repeat: -1, delay: 2 });
+        gsap.to(".node-pulse", { opacity: 0.8, scale: 1.5, transformOrigin: "center center", duration: 1.5, yoyo: true, repeat: -1, stagger: 0.3, ease: "sine.inOut" });
+
+        // Apparitions
+        gsap.from(".gsap-header", { y: -20, opacity: 0, duration: 1, ease: "power3.out" });
+        const tlHero = gsap.timeline();
+        tlHero.from(".gsap-title", { y: 50, opacity: 0, duration: 1.2, ease: "power4.out", delay: 0.2 })
+              .from(".gsap-subtitle", { y: 20, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8");
+
+        gsap.from(".gsap-card", {
+            scrollTrigger: { trigger: ".premium-grid", start: "top 80%" },
+            y: 60, opacity: 0, duration: 1.2, stagger: 0.15, ease: "expo.out"
+        });
+
+        // Effect Tilt 3D
+        const cards = document.querySelectorAll('.gsap-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -6; 
+                const rotateY = ((x - centerX) / centerX) * 6;
+                gsap.to(card, { rotateX: rotateX, rotateY: rotateY, transformPerspective: 1000, duration: 0.4, ease: "power2.out" });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.8, ease: "elastic.out(1, 0.5)" });
+            });
+        });
+    </script>
+</body>
+</html>

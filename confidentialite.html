@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="Politique de confidentialité de NCR Solutions : collecte, utilisation, conservation et protection des données personnelles conformément au RGPD.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/confidentialite.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="Politique de confidentialité | NCR Solutions">
+    <meta property="og:description" content="Politique de confidentialité de NCR Solutions : collecte, utilisation, conservation et protection des données personnelles conformément au RGPD.">
+    <meta property="og:url" content="https://ncr-solutions.fr/confidentialite.html">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Politique de confidentialité | NCR Solutions">
+    <meta name="twitter:description" content="Politique de confidentialité de NCR Solutions : collecte, utilisation, conservation et protection des données personnelles conformément au RGPD.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+<title>Politique de confidentialité | NCR Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
+    
+    <link rel="stylesheet" href="style.css">
+<style>
+        /* —————————————————————————————————————————————————————————————
+           DESIGN SYSTÈME : OPTIMISÉ POUR LA PERFORMANCE (0 LAG)
+           ————————————————————————————————————————————————————————————— */
+
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        :root {
+            --bg-global: #fbfbfd;
+            --text-main: #1d1d1f;
+            --text-dim: #515154;
+            --card-border: rgba(0, 0, 0, 0.04);
+            --accent: #2997ff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-global: #000000;
+                --text-main: #f5f5f7;
+                --text-dim: #a1a1a6;
+                --card-border: rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        body {
+            background-color: var(--bg-global) !important;
+            color: var(--text-main) !important;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        ::selection { background: rgba(41, 151, 255, 0.15); color: var(--text-main); }
+        ::-moz-selection { background: rgba(41, 151, 255, 0.15); color: var(--text-main); }
+
+        /* BARRE DE PROGRESSION OPTIMISÉE */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--accent);
+            z-index: 9999;
+            will-change: width;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 40px;
+            will-change: transform;
+        }
+        @media (prefers-color-scheme: dark) { header { background: rgba(20, 20, 22, 0.85); } }
+
+        /* HERO LÉGAL - 0 LAG */
+        .legal-hero {
+            position: relative;
+            padding: 140px 20px 80px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hero-mesh {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80vw;
+            height: 80vw;
+            max-width: 800px;
+            max-height: 800px;
+            background: radial-gradient(circle, rgba(41, 151, 255, 0.08) 0%, rgba(251, 251, 253, 0) 60%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        @media (prefers-color-scheme: dark) { .hero-mesh { background: radial-gradient(circle, rgba(41, 151, 255, 0.15) 0%, transparent 60%); } }
+
+        .legal-hero .badge {
+            background: rgba(41, 151, 255, 0.1);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .legal-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .legal-hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin: 20px auto 0;
+            max-width: 650px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* CONTENU LÉGAL */
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 60px 0 25px 0;
+            color: var(--text-main);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .legal-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 40px; height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .legal-content p, .legal-content ul {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-dim);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .legal-content li { margin-bottom: 12px; }
+        .legal-content strong { color: var(--text-main); font-weight: 600; }
+        .legal-content a { color: var(--accent); text-decoration: none; font-weight: 600; transition: opacity 0.3s ease; }
+        .legal-content a:hover { opacity: 0.7; }
+
+        /* CARTE DE CONTACT LÉGALE (GLASSMORPHISM) */
+        .legal-card {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 35px;
+            margin: 35px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.01);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .legal-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(41, 151, 255, 0.3);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .legal-card { 
+                background: rgba(255, 255, 255, 0.02); 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero { padding: 100px 20px 40px; }
+            .legal-content h2 { font-size: 1.5rem; }
+            .legal-card { padding: 25px; }
+        }
+    </style>
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ncr-solutions.fr/confidentialite.html#webpage",
+      "url": "https://ncr-solutions.fr/confidentialite.html",
+      "name": "Politique de confidentialité de NCR Solutions",
+      "description": "Politique de confidentialité de NCR Solutions : collecte, utilisation, conservation et protection des données personnelles conformément au RGPD.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      },
+      "breadcrumb": {
+        "@id": "https://ncr-solutions.fr/confidentialite.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ncr-solutions.fr/confidentialite.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://ncr-solutions.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Politique de confidentialité de NCR Solutions",
+          "item": "https://ncr-solutions.fr/confidentialite.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    
+    <div class="reading-progress" id="progress-bar"></div>
+
+    <header>
+        <a href="/" class="logo-container">
+            <img src="logo.png" alt="Logo N.C.R" class="logo-img" style="height: 40px;">
+            <div class="logo-text" style="font-weight:900; font-size:1.2rem; letter-spacing:-0.5px;">N.C.R<span> SOLUTIONS</span></div>
+        </a>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="solutions-digitales.html">Solutions Digitales</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="formations.html">Formations</a>
+            <a href="impact.html">Impact</a>
+            <a href="a-propos.html">À Propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main style="flex: 1;">
+        
+        <section class="legal-hero">
+            <div class="hero-mesh"></div>
+            <div class="badge gsap-hero">Réglementation RGPD européenne</div>
+            <h1 class="gsap-hero">Confidentialité</h1>
+            <p class="gsap-hero">La transparence est au cœur de nos engagements d'excellence terrain. Découvrez comment nous protégeons rigoureusement vos données personnelles.</p>
+        </section>
+
+        <div class="legal-container">
+            <div class="legal-content gsap-content">
+                
+                <h2>1. Responsable du traitement des données</h2>
+                <p>
+                    La préservation de la confidentialité de vos informations constitue un impératif de rigueur pour notre structure. Les données à caractère personnel collectées sur le site internet <strong>www.ncr-solutions.fr</strong> font l'objet d'un traitement automatisé placé sous la responsabilité légale de :
+                </p>
+                <div class="legal-card">
+                    <p style="margin: 0; color: var(--text-main);">
+                        <strong>Monsieur Nacer Hamadi</strong><br>
+                        En qualité de Directeur de N.C.R Solutions.<br>
+                        <strong>Adresse de contact direct :</strong> <a href="mailto:ncr-formations@outlook.fr">ncr-formations@outlook.fr</a><br>
+                        <strong>Téléphone professionnel :</strong> <a href="tel:+33621972139">06 21 97 21 39</a>
+                    </p>
+                </div>
+
+                <h2>2. Nature des données collectées</h2>
+                <p>
+                    Dans le cadre exclusif de la gestion de vos demandes de formation et d'accompagnement, nous veillons au principe de minimisation des données (ne collecter que le strict nécessaire). Les informations recueillies se limitent à :
+                </p>
+                <ul>
+                    <li><strong>Données d'identité professionnelle :</strong> Nom, prénom, dénomination de votre entreprise.</li>
+                    <li><strong>Données de contact direct :</strong> Adresse e-mail, numéro de téléphone.</li>
+                    <li><strong>Données de suivi :</strong> Informations fournies volontairement dans vos messages de contact pour contextualiser votre demande de diagnostic.</li>
+                    <li><strong>Données de navigation techniques :</strong> Cookies d'analyse anonymes liés à l'infrastructure technologique de notre hébergeur IONOS.</li>
+                </ul>
+
+                <h2>3. Finalités du traitement</h2>
+                <p>
+                    Vos données à caractère personnel ne sont jamais vendues, cédées ou louées à des tiers. Elles sont exploitées de manière transparente pour les objectifs spécifiques suivants :
+                </p>
+                <ul>
+                    <li>La gestion et la personnalisation de la relation client (réponse aux demandes de contact et établissement de propositions pédagogiques).</li>
+                    <li>L'organisation administrative, technique et pédagogique de vos sessions de formation sur-mesure.</li>
+                    <li>L'analyse statistique de fréquentation de nos pages pour optimiser en continu l'ergonomie et l'accessibilité du site.</li>
+                </ul>
+
+                <h2>4. Durée de conservation des données</h2>
+                <p>
+                    N.C.R Solutions applique des durées de conservation strictes et conformes aux préconisations de la CNIL :
+                </p>
+                <ul>
+                    <li><strong>Données des prospects (demandes d'information) :</strong> Les données sont supprimées ou archivées de manière sécurisée dans un délai maximum de <strong>3 ans</strong> à compter du dernier contact émanant de votre part.</li>
+                    <li><strong>Données des clients (stagiaires et entreprises formées) :</strong> Les informations indispensables au suivi administratif (attestations de formation, conventions, émargements) sont conservées pendant la durée légale requise par le Code du travail et les organismes de financement.</li>
+                </ul>
+
+                <h2>5. Sécurité et stockage des informations</h2>
+                <p>
+                    Toutes les informations que vous nous confiez sont stockées sur les serveurs sécurisés de notre hébergeur <strong>IONOS</strong> en Europe. Nous mettons en œuvre des protocoles techniques rigoureux (cryptage SSL/TLS de la navigation matérialisé par le cadenas dans votre navigateur) pour préserver l'intégrité de vos données contre tout accès non autorisé, altération ou divulgation.
+                </p>
+
+                <h2>6. Vos droits (Accès, Rectification, Effacement)</h2>
+                <p>
+                    Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un contrôle total sur vos données personnelles. Vous pouvez à tout moment exercer vos droits suivants :
+                </p>
+                <ul>
+                    <li><strong>Droit d'accès et de communication :</strong> Obtenir la confirmation que vos données sont traitées ou non, et en recevoir une copie lisible.</li>
+                    <li><strong>Droit de rectification :</strong> Demander la mise à jour ou la correction immédiate de vos informations.</li>
+                    <li><strong>Droit à l'effacement (droit à l'oubli) :</strong> Demander la suppression définitive de vos données de nos fichiers.</li>
+                    <li><strong>Droit d'opposition ou de limitation :</strong> Restreindre l'utilisation de vos données pour des motifs légitimes.</li>
+                </ul>
+                <p>
+                    Pour faire valoir vos droits, il vous suffit de nous adresser une demande claire par e-mail à : <strong><a href="mailto:ncr-formations@outlook.fr">ncr-formations@outlook.fr</a></strong>. Notre équipe traitera votre demande avec diligence sous un délai maximum de 30 jours réglementaires. 
+                </p>
+                <p>
+                    Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous avez la possibilité légale d'introduire une réclamation auprès de la CNIL (www.cnil.fr).
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <h2 style="font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -1px;">N.C.R Solutions</h2>
+                <p>Formations professionnelles & solutions digitales pour entreprises modernes. Nous aidons les structures à monter en compétence et en performance.</p>
+                <div class="footer-pill">Training partner • France</div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="impact.html">Impact</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <a href="formation1.html">Communication digitale</a>
+                    <a href="formation2.html">Outils numériques</a>
+                    <a href="formation3.html">Gestion des litiges</a>
+                    <a href="formation-reseaux.html">Réseaux sociaux</a>
+                    <a href="accompagnement-ponctuel.html">Accompagnement</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                    <a href="cgu.html">CGU</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+            <div class="contact-bar">
+                <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/></svg>
+                </a>
+            </div>
+            <span class="footer-meta">Designed with precision & simplicity</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script>
+        // 1. Initialisation Lenis
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+        });
+
+        // 2. Lier la barre de progression directement au moteur Lenis (0% RAM)
+        const progressBar = document.getElementById("progress-bar");
+        lenis.on('scroll', (e) => {
+            progressBar.style.width = (e.progress * 100) + "%";
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 3. Animations GSAP allégées
+        gsap.from(".gsap-hero", { 
+            y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power4.out" 
+        });
+
+        gsap.from(".gsap-content", {
+            y: 40, opacity: 0, duration: 1, delay: 0.2, ease: "power3.out"
+        });
+    </script>
+</body>
+</html>

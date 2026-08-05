@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="Community manager à Fréjus et dans le Var : stratégie éditoriale, création de contenus, gestion des réseaux sociaux, animation et reporting.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/community-management.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="Community manager à Fréjus | NCR Solutions">
+    <meta property="og:description" content="Community manager à Fréjus et dans le Var : stratégie éditoriale, création de contenus, gestion des réseaux sociaux, animation et reporting.">
+    <meta property="og:url" content="https://ncr-solutions.fr/community-management.html">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Community manager à Fréjus | NCR Solutions">
+    <meta name="twitter:description" content="Community manager à Fréjus et dans le Var : stratégie éditoriale, création de contenus, gestion des réseaux sociaux, animation et reporting.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+    
+    <title>Community manager à Fréjus | NCR Solutions</title>
+<link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Styles d'origine conservés intacts */
+        @keyframes cinematicReveal { 0% { opacity: 0; filter: blur(15px); transform: scale(0.97) translateY(30px); } 100% { opacity: 1; filter: blur(0); transform: scale(1) translateY(0); } }
+        body { background-color: #fbfbfd; opacity: 0; animation: cinematicReveal 1.2s forwards; margin: 0; font-family: -apple-system, sans-serif; color: #1d1d1f; }
+        header { display: flex; justify-content: space-between; padding: 20px 40px; background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); position: fixed; width: 100%; box-sizing: border-box; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero { text-align: center; padding: 150px 20px 80px; background: linear-gradient(180deg, #fff 0%, #f5f5f7 100%); }
+        .badge { background: rgba(0, 113, 227, 0.1); color: #0071e3; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
+        .module-card { background: white; padding: 40px; border-radius: 30px; border: 1px solid #eee; transition: all 0.3s; }
+        .module-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .info-section { background: #000; color: white; padding: 80px 40px; border-radius: 50px; text-align: center; margin-bottom: 80px; }
+        .info-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
+        .info-item h4 { color: #0071e3; margin-bottom: 10px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1.5px; }
+        .info-item p { font-size: 1.1rem; font-weight: 500; margin: 0; }
+
+        /* INTÉGRATION DU MODE SOMBRE AUTOMATIQUE */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --text-main: #f5f5f7;
+                --border: #424245;
+                --card-bg: #1c1c1e;
+            }
+            body { background-color: var(--bg) !important; color: var(--text-main) !important; }
+            header { background: rgba(0,0,0,0.85) !important; border-bottom-color: var(--border) !important; }
+            .hero { background: linear-gradient(180deg, #000 0%, #111 100%) !important; }
+            .module-card { background-color: var(--card-bg) !important; border-color: var(--border) !important; }
+        }
+        /* ==========================================================================
+   FIX MAGIQUE 1 : HEADER & NAV EN MODE SOMBRE
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+    /* Fond du bandeau bien sombre */
+    header {
+        background: rgba(20, 20, 22, 0.95) !important;
+    }
+    
+    /* Force le texte du logo et de la navigation en blanc */
+    header a, 
+    header nav a, 
+    header .logo-text, 
+    header .ncr-logo-text {
+        color: #ffffff !important;
+    }
+    
+    /* Préserve le bleu de "SOLUTIONS" */
+    header .logo-text span, 
+    header .ncr-logo-text span {
+        color: #2997ff !important;
+    }
+}
+/* ==========================================================================
+   FIX MAGIQUE 2 : RESPONSIVE DES CARTES SUR MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Annule les grilles minmax et force 1 seule colonne 100% largeur */
+    .presentation-box, 
+    .audience-box, 
+    .module-card, 
+    .program-grid,
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 25px !important; /* Marges réduites pour petits écrans */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Centre la grille des prix/infos sur mobile */
+    .info-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+    }
+
+    /* Sécurité anti-débordement global pour le conteneur principal */
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        overflow-x: hidden !important; 
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+}
+
+    </style>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ncr-solutions.fr/community-management.html#webpage",
+      "url": "https://ncr-solutions.fr/community-management.html",
+      "name": "Community management à Fréjus",
+      "description": "Community manager à Fréjus et dans le Var : stratégie éditoriale, création de contenus, gestion des réseaux sociaux, animation et reporting.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      },
+      "breadcrumb": {
+        "@id": "https://ncr-solutions.fr/community-management.html#breadcrumb"
+      },
+      "about": {
+        "@id": "https://ncr-solutions.fr/community-management.html#main-entity"
+      },
+      "mainEntity": {
+        "@id": "https://ncr-solutions.fr/community-management.html#main-entity"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://ncr-solutions.fr/community-management.html#main-entity",
+      "name": "Community management à Fréjus",
+      "description": "Community manager à Fréjus et dans le Var : stratégie éditoriale, création de contenus, gestion des réseaux sociaux, animation et reporting.",
+      "serviceType": "Community management et gestion des réseaux sociaux",
+      "url": "https://ncr-solutions.fr/community-management.html",
+      "provider": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "availableChannel": [
+        {
+          "@type": "ServiceChannel",
+          "serviceLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Fréjus",
+              "postalCode": "83600",
+              "addressCountry": "FR"
+            }
+          }
+        },
+        {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://ncr-solutions.fr/contact.html"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://ncr-solutions.fr/community-management.html",
+        "price": "249",
+        "priceCurrency": "EUR",
+        "description": "Forfait mensuel à partir de 249 € HT",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ncr-solutions.fr/community-management.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://ncr-solutions.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Solutions digitales",
+          "item": "https://ncr-solutions.fr/solutions-digitales.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Community management à Fréjus",
+          "item": "https://ncr-solutions.fr/community-management.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+    <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:12px;">
+        <img src="logo.png" alt="Logo N.C.R" style="height:40px;">
+        <div class="ncr-logo-text" style="color:#1d1d1f;font-weight:900;font-size:1.2rem;">
+            N.C.R <span style="color:#0071e3;">SOLUTIONS</span>
+        </div>
+    </a>
+    <nav>
+        <a href="solutions-digitales.html" style="text-decoration:none; color:inherit; font-weight:600;">← Catalogue Services</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <div class="container"><div class="badge">Marketing Digital</div><h1 style="font-size: 3.5rem; font-weight: 900; letter-spacing: -2px;">Publier mieux<br><span style="color: #0071e3;">Développer sa visibilité</span></h1><p style="font-size: 1.3rem; color: #6e6e73; max-width: 700px; margin: 30px auto;">Confiez vos réseaux sociaux à un community manager à Fréjus et concentrez-vous sur votre activité pendant que votre visibilité progresse.</p></div>
+    </section>
+
+    <div class="container">
+        <div style="background: white; padding: 50px; border-radius: 40px; border: 1px solid #eee; margin-bottom: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div><h2 style="font-size: 2.2rem; letter-spacing: -1px; margin-bottom: 20px;">Pourquoi investir dans les réseaux sociaux ?</h2><p style="color: #6e6e73; line-height: 1.6;">Les réseaux sociaux sont devenus indispensables pour attirer des prospects, fidéliser vos clients et renforcer votre image de marque. Une présence régulière permet d'augmenter votre visibilité et votre crédibilité.</p></div>
+            <div style="background: #f5f5f7; padding: 35px; border-radius: 30px;"><h3 style="margin-top: 0;">Pour qui ?</h3><ul style="padding: 0; list-style: none; font-weight: 500;">
+<li>• Commerçants</li>
+<li>• Restaurateurs</li>
+<li>• Professions libérales</li>
+<li>• PME & TPE</li>
+</ul></ul></div>
+        </div>
+
+        <h2 style="text-align:center;font-size:2.5rem;">
+         Nos prestations
+        </h2>
+
+        <div class="program-grid">
+            <div class="module-card"><span class="module-number">SERVICE 1</span><h3>Audit & Stratégie</h3>
+<ul>
+<li>Analyse de votre présence actuelle</li>
+<li>Étude concurrentielle</li>
+<li>Définition des objectifs</li>
+<li>Plan de communication</li>
+</ul>
+</div>
+            <div class="module-card">
+<span class="module-number">SERVICE 2</span>
+<h3>Création de contenu</h3>
+<ul>
+<li>Visuels professionnels</li>
+<li>Publications engageantes</li>
+<li>Stories & Reels</li>
+<li>Textes optimisés</li>
+</ul>
+</div>
+
+            <div class="module-card">
+<span class="module-number">SERVICE 3</span>
+<h3>Gestion des réseaux</h3>
+<ul>
+<li>Facebook</li>
+<li>Instagram</li>
+<li>LinkedIn</li>
+<li>TikTok</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">SERVICE 4</span>
+<h3>Animation de communauté</h3>
+<ul>
+<li>Réponse aux commentaires</li>
+<li>Interaction avec l'audience</li>
+<li>Valorisation de la marque</li>
+<li>Fidélisation</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">SERVICE 5</span>
+<h3>Suivi & Reporting</h3>
+<ul>
+<li>Analyse des statistiques</li>
+<li>Évolution de la visibilité</li>
+<li>Rapports réguliers</li>
+<li>Optimisations continues</li>
+</ul>
+</div>
+
+        </div>
+
+        <section class="info-section">
+            <h2 style="font-size: 2.5rem; letter-spacing: -2px; margin-bottom: 15px;">Forfaits Community Management</h2>
+            <p style="opacity: 0.8; font-size: 1.1rem;">Des offres adaptées à la taille de votre activité.</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>Essentiel</h4>
+                    <p>249 € HT / mois</p>
+                </div>
+                <div class="info-item">
+                    <h4>Business</h4>
+                    <p>499 € HT / mois</p>
+                </div>
+                <div class="info-item">
+                    <h4>Premium</h4>
+                    <p>Sur devis</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <a href="contact.html" style="background: #0071e3; color: white; padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.3s;">Contactez-nous dès maintenant →</a>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+
+  <div class="footer-bg"></div>
+
+  <div class="footer-wrapper">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h2>N.C.R Solutions</h2>
+      <p>
+        Formations professionnelles & solutions digitales pour entreprises modernes.
+        Nous aidons les structures à monter en compétence et en performance.
+      </p>
+
+      <div class="footer-pill">
+        Training partner • France
+      </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="/">Accueil</a>
+        <a href="formations.html">Formations</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <a href="formation1.html">Communication digitale</a>
+        <a href="formation2.html">Outils numériques</a>
+        <a href="formation3.html">Gestion des litiges</a>
+        <a href="formation-reseaux.html">Réseaux sociaux</a>
+        <a href="accompagnement-ponctuel.html">Accompagnement</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="cgu.html">CGU</a>
+        <a href="cgv.html">CGV</a>
+     </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+    <div class="contact-bar">
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-item">
+
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/>
+    </svg>
+
+  </a>
+
+  <!-- Téléphone -->
+  <a href="tel:+33621972139" class="contact-item">
+
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
+    </svg>
+
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:ncr-formations@outlook.fr" class="contact-item">
+
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+
+  </a>
+
+</div>
+    <span class="footer-meta">Designed with precision & simplicity</span>
+  </div>
+
+</footer>
+</body>
+</html>

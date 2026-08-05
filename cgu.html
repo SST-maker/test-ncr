@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="Conditions générales d&#x27;utilisation du site NCR Solutions, règles d&#x27;accès aux contenus et responsabilités liées à l&#x27;utilisation des services en ligne.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/cgu.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="Conditions générales d&#x27;utilisation | NCR Solutions">
+    <meta property="og:description" content="Conditions générales d&#x27;utilisation du site NCR Solutions, règles d&#x27;accès aux contenus et responsabilités liées à l&#x27;utilisation des services en ligne.">
+    <meta property="og:url" content="https://ncr-solutions.fr/cgu.html">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conditions générales d&#x27;utilisation | NCR Solutions">
+    <meta name="twitter:description" content="Conditions générales d&#x27;utilisation du site NCR Solutions, règles d&#x27;accès aux contenus et responsabilités liées à l&#x27;utilisation des services en ligne.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+<title>Conditions générales d'utilisation | NCR Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
+    
+    <link rel="stylesheet" href="style.css">
+<style>
+        /* —————————————————————————————————————————————————————————————
+           DESIGN SYSTÈME : OPTIMISÉ POUR LA PERFORMANCE (0 LAG)
+           ————————————————————————————————————————————————————————————— */
+
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        :root {
+            --bg-global: #fbfbfd;
+            --text-main: #1d1d1f;
+            --text-dim: #515154;
+            --card-border: rgba(0, 0, 0, 0.04);
+            --accent: #2997ff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-global: #000000;
+                --text-main: #f5f5f7;
+                --text-dim: #a1a1a6;
+                --card-border: rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        body {
+            background-color: var(--bg-global) !important;
+            color: var(--text-main) !important;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        ::selection { background: rgba(41, 151, 255, 0.15); color: var(--text-main); }
+        ::-moz-selection { background: rgba(41, 151, 255, 0.15); color: var(--text-main); }
+
+        /* BARRE DE PROGRESSION OPTIMISÉE */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--accent);
+            z-index: 9999;
+            will-change: width;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 40px;
+            will-change: transform;
+        }
+        @media (prefers-color-scheme: dark) { header { background: rgba(20, 20, 22, 0.85); } }
+
+        /* HERO LÉGAL - 0 LAG */
+        .legal-hero {
+            position: relative;
+            padding: 140px 20px 80px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hero-mesh {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80vw;
+            height: 80vw;
+            max-width: 800px;
+            max-height: 800px;
+            background: radial-gradient(circle, rgba(41, 151, 255, 0.08) 0%, rgba(251, 251, 253, 0) 60%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        @media (prefers-color-scheme: dark) { .hero-mesh { background: radial-gradient(circle, rgba(41, 151, 255, 0.15) 0%, transparent 60%); } }
+
+        .legal-hero .badge {
+            background: rgba(41, 151, 255, 0.1);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .legal-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .legal-hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin: 20px auto 0;
+            max-width: 650px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* CONTENU LÉGAL */
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 60px 0 25px 0;
+            color: var(--text-main);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .legal-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 40px; height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .legal-content p, .legal-content ul {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-dim);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .legal-content li { margin-bottom: 12px; }
+        .legal-content strong { color: var(--text-main); font-weight: 600; }
+        .legal-content a { color: var(--accent); text-decoration: none; font-weight: 600; transition: opacity 0.3s ease; }
+        .legal-content a:hover { opacity: 0.7; }
+
+        @media (max-width: 768px) {
+            .legal-hero { padding: 100px 20px 40px; }
+            .legal-content h2 { font-size: 1.5rem; }
+        }
+    </style>
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ncr-solutions.fr/cgu.html#webpage",
+      "url": "https://ncr-solutions.fr/cgu.html",
+      "name": "Conditions générales d'utilisation de NCR Solutions",
+      "description": "Conditions générales d'utilisation du site NCR Solutions, règles d'accès aux contenus et responsabilités liées à l'utilisation des services en ligne.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      },
+      "breadcrumb": {
+        "@id": "https://ncr-solutions.fr/cgu.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ncr-solutions.fr/cgu.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://ncr-solutions.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Conditions générales d'utilisation de NCR Solutions",
+          "item": "https://ncr-solutions.fr/cgu.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    
+    <div class="reading-progress" id="progress-bar"></div>
+
+    <header>
+        <a href="/" class="logo-container">
+            <img src="logo.png" alt="Logo N.C.R" class="logo-img" style="height: 40px;">
+            <div class="logo-text" style="font-weight:900; font-size:1.2rem; letter-spacing:-0.5px;">N.C.R<span> SOLUTIONS</span></div>
+        </a>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="solutions-digitales.html">Solutions Digitales</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="formations.html">Formations</a>
+            <a href="impact.html">Impact</a>
+            <a href="a-propos.html">À Propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main style="flex: 1;">
+        
+        <section class="legal-hero">
+            <div class="hero-mesh"></div>
+            <div class="badge gsap-hero">Utilisation de la plateforme</div>
+            <h1 class="gsap-hero">Conditions d'Utilisation</h1>
+            <p class="gsap-hero">Règles encadrant l'accès, la navigation et l'utilisation des services en ligne proposés par l'écosystème N.C.R Solutions.</p>
+        </section>
+
+        <div class="legal-container">
+            <div class="legal-content gsap-content">
+                
+                <h2>1. Objet des CGU</h2>
+                <p>
+                    Les présentes Conditions Générales d'Utilisation (ci-après « CGU ») ont pour objet de définir les modalités et conditions dans lesquelles <strong>N.C.R Solutions</strong> met à la disposition de ses utilisateurs le site internet <strong>www.ncr-solutions.fr</strong>, ainsi que les services disponibles sur ce site.
+                </p>
+                <p>
+                    Toute connexion ou navigation sur ce site implique l'acceptation pleine et sans réserve des présentes CGU par l'utilisateur.
+                </p>
+
+                <h2>2. Accès au site et services fournis</h2>
+                <p>
+                    Le site internet <strong>www.ncr-solutions.fr</strong> a pour vocation de fournir des informations concernant l'ensemble des activités de N.C.R Solutions, notamment les prestations de formation professionnelle et l'accompagnement digital.
+                </p>
+                <p>
+                    L'éditeur s'efforce de permettre l'accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d'un événement hors de son contrôle, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services. N.C.R Solutions ne peut garantir une disponibilité absolue du site.
+                </p>
+
+                <h2>3. Propriété intellectuelle</h2>
+                <p>
+                    La structure générale du site, ainsi que les textes, graphiques, images, sons et vidéos la composant, sont la propriété de l'éditeur ou de ses partenaires. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale des contenus et services proposés par le site, par quelque procédé que ce soit, sans l'autorisation préalable et par écrit de N.C.R Solutions est strictement interdite et serait susceptible de constituer une contrefaçon au sens du Code de la propriété intellectuelle.
+                </p>
+
+                <h2>4. Responsabilité de l'utilisateur</h2>
+                <p>
+                    L'utilisateur s'engage à utiliser le site de manière responsable et licite. Il s'interdit notamment :
+                </p>
+                <ul>
+                    <li>De transmettre des virus, chevaux de Troie ou tout autre programme malveillant.</li>
+                    <li>De tenter d'accéder frauduleusement aux bases de données ou au code source du site.</li>
+                    <li>De reproduire l'interface ou le design (CSS/HTML/JS) à des fins commerciales ou concurrentielles.</li>
+                </ul>
+
+                <h2>5. Liens hypertextes</h2>
+                <p>
+                    Le site <strong>www.ncr-solutions.fr</strong> peut contenir des liens hypertextes vers d'autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site de N.C.R Solutions. Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse, à condition que ce lien s'ouvre dans une nouvelle fenêtre du navigateur et ne porte pas atteinte à l'image de N.C.R Solutions.
+                </p>
+
+                <h2>6. Évolution des Conditions Générales</h2>
+                <p>
+                    N.C.R Solutions se réserve le droit de modifier les termes, conditions et mentions des présentes CGU à tout moment afin de les adapter aux évolutions du site et/ou de son exploitation. Il est donc conseillé à l'utilisateur de consulter régulièrement la dernière version des CGU disponible sur le site.
+                </p>
+
+                <h2>7. Droit applicable et juridiction compétente</h2>
+                <p>
+                    Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d'utilisation. En cas de contestation éventuelle, et après l'échec de toute tentative de recherche d'une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <h2 style="font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -1px;">N.C.R Solutions</h2>
+                <p>Formations professionnelles & solutions digitales pour entreprises modernes. Nous aidons les structures à monter en compétence et en performance.</p>
+                <div class="footer-pill">Training partner • France</div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="impact.html">Impact</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <a href="formation1.html">Communication digitale</a>
+                    <a href="formation2.html">Outils numériques</a>
+                    <a href="formation3.html">Gestion des litiges</a>
+                    <a href="formation-reseaux.html">Réseaux sociaux</a>
+                    <a href="accompagnement-ponctuel.html">Accompagnement</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                    <a href="cgu.html">CGU</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+            <div class="contact-bar">
+                <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/></svg>
+                </a>
+            </div>
+            <span class="footer-meta">Designed with precision & simplicity</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script>
+        // 1. Initialisation Lenis
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+        });
+
+        // 2. Barre de progression (0% RAM)
+        const progressBar = document.getElementById("progress-bar");
+        lenis.on('scroll', (e) => {
+            progressBar.style.width = (e.progress * 100) + "%";
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 3. Animations GSAP allégées
+        gsap.from(".gsap-hero", { 
+            y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power4.out" 
+        });
+
+        gsap.from(".gsap-content", {
+            y: 40, opacity: 0, duration: 1, delay: 0.2, ease: "power3.out"
+        });
+    </script>
+</body>
+</html>

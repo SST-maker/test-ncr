@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="Contactez NCR Solutions à Fréjus pour un projet de site internet, assistance informatique, community management ou formation professionnelle sur mesure.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="Contact NCR Solutions à Fréjus | Devis et diagnostic">
+    <meta property="og:description" content="Contactez NCR Solutions à Fréjus pour un projet de site internet, assistance informatique, community management ou formation professionnelle sur mesure.">
+    <meta property="og:url" content="https://ncr-solutions.fr/contact.html">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact NCR Solutions à Fréjus | Devis et diagnostic">
+    <meta name="twitter:description" content="Contactez NCR Solutions à Fréjus pour un projet de site internet, assistance informatique, community management ou formation professionnelle sur mesure.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+<title>Contact NCR Solutions à Fréjus | Devis et diagnostic</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* —————————————————————————————————————————————————————————————
+           DESIGN SYSTÈME : PAGE CONTACT ULTRA-PREMIUM (AGENCY STYLE)
+           ————————————————————————————————————————————————————————————— */
+
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        :root {
+            --bg-global: #fbfbfd;
+            --text-main: #1d1d1f;
+            --text-dim: #515154;
+            --card-bg: #ffffff;
+            --card-border: rgba(0, 0, 0, 0.04);
+            --input-bg: rgba(0, 0, 0, 0.02);
+            --input-border: rgba(0, 0, 0, 0.08);
+            --accent: #2997ff;
+            --glass-bg: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-global: #000000;
+                --text-main: #f5f5f7;
+                --text-dim: #a1a1a6;
+                --card-bg: #1c1c1e;
+                --card-border: rgba(255, 255, 255, 0.08);
+                --input-bg: rgba(255, 255, 255, 0.03);
+                --input-border: rgba(255, 255, 255, 0.1);
+                --glass-bg: rgba(28, 28, 30, 0.5);
+            }
+        }
+
+        body {
+            background-color: var(--bg-global) !important;
+            color: var(--text-main) !important;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 40px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            header { background: rgba(20, 20, 22, 0.85); }
+        }
+
+        /* GRID SPLIT LAYOUT */
+        .contact-container {
+            max-width: 1300px;
+            margin: 80px auto 120px;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        /* COLONNE GAUCHE : TEXTES ET INFOS */
+        .contact-left .badge {
+            background: rgba(41, 151, 255, 0.1);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .contact-left h1 {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -2.5px;
+            line-height: 1.05;
+            margin: 0 0 25px 0;
+        }
+
+        .contact-left h1 span {
+            background: linear-gradient(135deg, var(--accent) 0%, #0071e3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-left p.lead {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            margin-bottom: 50px;
+            max-width: 450px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: transform 0.4s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .info-icon {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .info-title {
+            font-weight: 800;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .info-detail {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .info-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* COLONNE DROITE : LE FORMULAIRE GLASSMORPHISM */
+        .contact-right {
+            position: relative;
+        }
+
+        /* Ambient Orbs (Lumières de fond) */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: floatOrb 10s infinite alternate ease-in-out;
+        }
+        .orb-1 { width: 300px; height: 300px; background: rgba(41, 151, 255, 0.4); top: -50px; left: -50px; }
+        .orb-2 { width: 250px; height: 250px; background: rgba(142, 45, 226, 0.2); bottom: -50px; right: -50px; animation-delay: -5s; }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, 30px) scale(1.1); }
+        }
+
+        .form-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid var(--card-border);
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .form-input {
+            width: 100%;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            color: var(--text-main);
+            padding: 18px 20px;
+            border-radius: 16px;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-input::placeholder { color: var(--text-dim); opacity: 0.6; }
+
+        .form-input:focus {
+            background: var(--card-bg);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.15);
+        }
+
+        /* Custom Select */
+        select.form-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+            cursor: pointer;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            select.form-input {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            }
+        }
+
+        .magnetic-btn-wrapper {
+            display: inline-block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--text-main);
+            color: var(--bg-global);
+            border: none;
+            padding: 22px;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform 0.1s ease-out, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-submit:hover {
+            background: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 15px 30px rgba(41, 151, 255, 0.3);
+        }
+
+        /* RESPONSIVE MOBILE */
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 0 20px;
+                margin: 50px auto 80px;
+            }
+            .info-grid { grid-template-columns: 1fr; }
+            .form-card { padding: 35px 25px; border-radius: 32px; }
+            .contact-left h1 { font-size: 2.8rem; }
+        }
+    </style>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://ncr-solutions.fr/contact.html#webpage",
+      "url": "https://ncr-solutions.fr/contact.html",
+      "name": "Contacter NCR Solutions à Fréjus",
+      "description": "Contactez NCR Solutions à Fréjus pour un projet de site internet, assistance informatique, community management ou formation professionnelle sur mesure.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      },
+      "breadcrumb": {
+        "@id": "https://ncr-solutions.fr/contact.html#breadcrumb"
+      },
+      "about": {
+        "@id": "https://ncr-solutions.fr/contact.html#main-entity"
+      },
+      "mainEntity": {
+        "@id": "https://ncr-solutions.fr/contact.html#main-entity"
+      }
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://ncr-solutions.fr/contact.html#main-entity",
+      "name": "Contacter NCR Solutions à Fréjus",
+      "description": "Contactez NCR Solutions à Fréjus pour un projet de site internet, assistance informatique, community management ou formation professionnelle sur mesure.",
+      "url": "https://ncr-solutions.fr/contact.html",
+      "mainEntity": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ncr-solutions.fr/contact.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://ncr-solutions.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contacter NCR Solutions à Fréjus",
+          "item": "https://ncr-solutions.fr/contact.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo-container">
+            <img src="logo.png" alt="Logo N.C.R" class="logo-img" style="height: 40px;">
+            <div class="logo-text" style="font-weight:900; font-size:1.2rem; letter-spacing:-0.5px;">N.C.R<span> SOLUTIONS</span></div>
+        </a>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="solutions-digitales.html">Solutions Digitales</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="formations.html">Formations</a>
+            <a href="impact.html">Impact</a>
+            <a href="a-propos.html">À Propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" style="color: var(--accent) !important; font-weight: 600;">Contact</a>
+        </nav>
+    </header>
+
+    <main style="flex: 1;">
+        <div class="contact-container">
+            
+            <div class="contact-left">
+                <div class="badge gsap-elem">Parlons de votre projet</div>
+                <h1 class="gsap-elem">Construisons<br><span>votre solution</span></h1>
+                <p class="lead gsap-elem">
+                    Un projet digital ? Une équipe à former ? Décrivez-nous votre situation. Nous concevons une réponse sur-mesure et revenons vers vous sous 24h.
+                </p>
+
+                <div class="info-grid gsap-elem">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-title">Localisation</div>
+                        <p class="info-detail">191 impasse Missiri<br>83600 Fréjus</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div class="info-title">Téléphone</div>
+                        <p class="info-detail">Intervention rapide<br>
+                            <a href="tel:0621972139" class="info-link">06 21 97 21 39</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right gsap-form">
+                <div class="ambient-orb orb-1"></div>
+                <div class="ambient-orb orb-2"></div>
+                
+                <div class="form-card">
+                    <h2 style="margin-top: 0; margin-bottom: 30px; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px;">Demande de contact</h2>
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="3fe0edf2-4764-42c3-aa77-9739056ac522">
+                        <input type="hidden" name="redirect" value="https://ncr-solutions.fr/merci.html">
+                        <input type="hidden" name="subject" value="Nouveau contact NCR Solutions">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                            <div class="form-group">
+                                <label class="form-label">Nom / Entreprise *</label>
+                                <input type="text" name="nom" required placeholder="Votre nom" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email *</label>
+                                <input type="email" name="email" required placeholder="votre@email.com" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Type de besoin *</label>
+                            <select name="besoin" required class="form-input">
+                                <option value="site web">Création de site internet</option>
+                                <option value="Cmanager">Community Management</option>
+                                <option value="assistance">Assistance Informatique</option>
+                                <option value="Formation">Formation Communication</option>
+                                <option value="Outils">Outils Numériques</option>
+                                <option value="Litiges">Gestion des Litiges</option>
+                                <option value="SST">Formation SST (Secourisme)</option>
+                                <option value="Sur-mesure">Conseil Sur-Mesure</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 35px;">
+                            <label class="form-label">Décrivez votre projet *</label>
+                            <textarea name="message" rows="5" required placeholder="Quels sont vos objectifs ?" class="form-input" style="resize: vertical;"></textarea>
+                        </div>
+
+                        <div class="magnetic-btn-wrapper">
+                            <button type="submit" class="btn-submit magnetic-btn">Envoyer ma demande</button>
+                        </div>
+                        
+                        <p style="text-align: center; font-size: 0.85rem; color: var(--text-dim); margin-top: 25px; font-weight: 600;">
+                            🔒 Vos données sont sécurisées. Réponse sous 24h.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <h2 style="font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -1px;">N.C.R Solutions</h2>
+                <p>Formations professionnelles & solutions digitales pour entreprises modernes. Nous aidons les structures à monter en compétence et en performance.</p>
+                <div class="footer-pill">Training partner • France</div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="formations.html">Formations</a>
+                    <a href="impact.html">Impact</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <a href="formation1.html">Communication digitale</a>
+                    <a href="formation2.html">Outils numériques</a>
+                    <a href="formation3.html">Gestion des litiges</a>
+                    <a href="formation-reseaux.html">Réseaux sociaux</a>
+                    <a href="accompagnement-ponctuel.html">Accompagnement</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                    <a href="cgu.html">CGU</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+            <div class="contact-bar">
+                <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/></svg>
+                </a>
+                <a href="tel:+33621972139" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+                </a>
+                <a href="mailto:ncr-formations@outlook.fr" class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+            <span class="footer-meta">Designed with precision & simplicity</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script>
+        // 1. Initialisation Smooth Scroll (Lenis)
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 2. Animations GSAP (Entrée Cinematic)
+        // Partie gauche (Textes)
+        gsap.from(".gsap-elem", {
+            y: 40,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power4.out",
+            delay: 0.2
+        });
+
+        // Partie droite (Formulaire)
+        gsap.from(".gsap-form", {
+            x: 40,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        // 3. Bouton Magnétique
+        const magneticWrapper = document.querySelector('.magnetic-btn-wrapper');
+        const magneticBtn = document.querySelector('.magnetic-btn');
+        
+        if (magneticWrapper && magneticBtn && window.innerWidth > 900) {
+            magneticWrapper.addEventListener('mousemove', (e) => {
+                const rect = magneticWrapper.getBoundingClientRect();
+                const h = rect.width / 2;
+                const v = rect.height / 2;
+                const x = e.clientX - rect.left - h;
+                const y = e.clientY - rect.top - v;
+                
+                magneticBtn.style.transform = `translate(${x * 0.2}px, ${y * 0.3}px)`;
+            });
+            
+            magneticWrapper.addEventListener('mouseleave', () => {
+                magneticBtn.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                magneticBtn.style.transform = `translate(0px, 0px)`;
+                
+                setTimeout(() => {
+                    magneticBtn.style.transition = 'transform 0.1s ease-out, background 0.3s ease, box-shadow 0.3s ease';
+                }, 500);
+            });
+        }
+    </script>
+</body>
+</html>

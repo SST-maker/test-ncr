@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO NCR Solutions : métadonnées harmonisées -->
+    <meta name="description" content="Formateur SST à Fréjus et dans le Var : formation initiale Sauveteur Secouriste du Travail et maintien et actualisation des compétences MAC SST.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="N.C.R Solutions">
+    <link rel="canonical" href="https://ncr-solutions.fr/formation-sst.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="N.C.R Solutions">
+    <meta property="og:title" content="Formateur SST à Fréjus | NCR Solutions">
+    <meta property="og:description" content="Formateur SST à Fréjus et dans le Var : formation initiale Sauveteur Secouriste du Travail et maintien et actualisation des compétences MAC SST.">
+    <meta property="og:url" content="https://ncr-solutions.fr/formation-sst.html">
+    <meta property="og:image" content="https://ncr-solutions.fr/logo.png">
+    <meta property="og:image:alt" content="Logo N.C.R Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Formateur SST à Fréjus | NCR Solutions">
+    <meta name="twitter:description" content="Formateur SST à Fréjus et dans le Var : formation initiale Sauveteur Secouriste du Travail et maintien et actualisation des compétences MAC SST.">
+    <meta name="twitter:image" content="https://ncr-solutions.fr/logo.png">
+    <meta name="twitter:image:alt" content="Logo N.C.R Solutions">
+
+<title>Formateur SST à Fréjus | NCR Solutions</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* —————————————————————————————————————————————————————————————
+           DESIGN SYSTÈME : PAGE DÉTAIL FORMATION (SST)
+           ————————————————————————————————————————————————————————————— */
+        
+        :root {
+            --bg-global: #fbfbfd;
+            --text-main: #1d1d1f;
+            --text-dim: #515154;
+            --card-bg: #ffffff;
+            --card-border: rgba(0, 0, 0, 0.04);
+            --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            --header-bg: rgba(255, 255, 255, 0.85);
+            --accent: #2997ff;
+            /* Couleur spécifique SST (Rouge Médical/Urgence) */
+            --sst-color: #ff3b30;
+            --sst-bg: rgba(255, 59, 48, 0.08);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-global: #000000;
+                --text-main: #ffffff;
+                --text-dim: #a1a1a6;
+                --card-bg: #1c1c1e;
+                --card-border: #323236;
+                --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                --header-bg: rgba(20, 20, 22, 0.95);
+                --sst-bg: rgba(255, 59, 48, 0.15);
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-global) !important;
+            color: var(--text-main) !important;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--header-bg) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 40px;
+        }
+        
+        header a, header nav a, header .logo-text { color: var(--text-main) !important; text-decoration: none; }
+        header .logo-text span { color: var(--accent) !important; }
+
+        /* HERO SECTION */
+        .course-hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .course-hero .badge {
+            background: var(--sst-bg);
+            color: var(--sst-color);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .course-hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4.2rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+        }
+
+        .course-hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        /* SPLIT VIEW : INITIALE VS MAC */
+        .split-view-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .split-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            padding: 50px 40px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .split-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Liseré Rouge en haut des cartes */
+        .split-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--sst-color);
+        }
+
+        .split-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .split-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .duration-tag {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--sst-color);
+        }
+
+        .split-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .split-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .split-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sst-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .target-audience {
+            background: var(--bg-global);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .target-audience strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--sst-color);
+        }
+
+        /* PROGRAMME DÉTAILLÉ BENTO */
+        .program-section {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .program-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 50px;
+            letter-spacing: -1px;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .program-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .box-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--sst-bg);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .box-number { color: rgba(255, 59, 48, 0.2); }
+        }
+
+        .program-box h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .program-box p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 60px;
+        }
+
+        .btn-sst {
+            background: var(--sst-color);
+            color: white !important;
+            padding: 20px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 20px rgba(255, 59, 48, 0.2);
+        }
+
+        .btn-sst:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 59, 48, 0.3);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .split-view-container { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .course-hero { padding: 60px 20px 40px; }
+            .split-card { padding: 35px 25px; }
+            .split-header h2 { font-size: 1.6rem; }
+        }
+    </style>
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ncr-solutions.fr/#organization",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "url": "https://ncr-solutions.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ncr-solutions.fr/#logo",
+        "url": "https://ncr-solutions.fr/logo.png",
+        "contentUrl": "https://ncr-solutions.fr/logo.png"
+      },
+      "image": "https://ncr-solutions.fr/logo.png",
+      "telephone": "+33621972139",
+      "email": "ncr-formations@outlook.fr",
+      "priceRange": "€€",
+      "slogan": "Parler vrai, former juste.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "191 impasse Missiri",
+        "postalCode": "83600",
+        "addressLocality": "Fréjus",
+        "addressRegion": "Provence-Alpes-Côte d’Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Fréjus"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Raphaël"
+        },
+        {
+          "@type": "City",
+          "name": "Puget-sur-Argens"
+        },
+        {
+          "@type": "City",
+          "name": "Roquebrune-sur-Argens"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "founder": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33621972139",
+        "email": "ncr-formations@outlook.fr",
+        "contactType": "service client",
+        "availableLanguage": [
+          "fr"
+        ],
+        "areaServed": "FR"
+      },
+      "knowsAbout": [
+        "Création de sites internet",
+        "Assistance informatique",
+        "Community management",
+        "Communication interne et externe",
+        "Bureautique et outils numériques",
+        "Réseaux sociaux",
+        "Sauveteur Secouriste du Travail"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi",
+      "name": "Nacer Hamadi",
+      "url": "https://ncr-solutions.fr/a-propos.html",
+      "image": "https://ncr-solutions.fr/nacer.jpg",
+      "jobTitle": "Formateur et consultant digital",
+      "worksFor": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "knowsAbout": [
+        "Formation SST",
+        "Communication interne et externe",
+        "Formation bureautique",
+        "Outils numériques",
+        "Réseaux sociaux",
+        "Community management",
+        "Création de sites internet",
+        "Assistance informatique"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/nacer-hamadi-7b6476375"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ncr-solutions.fr/#website",
+      "url": "https://ncr-solutions.fr/",
+      "name": "N.C.R Solutions",
+      "alternateName": "NCR Solutions",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://ncr-solutions.fr/formation-sst.html#formation-sst",
+      "name": "Formation initiale Sauveteur Secouriste du Travail (SST)",
+      "description": "Formation initiale SST consacrée à la prévention des risques professionnels et aux gestes de secours en entreprise.",
+      "url": "https://ncr-solutions.fr/formation-sst.html",
+      "inLanguage": "fr-FR",
+      "provider": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "instructor": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "courseMode": "Présentiel en intra-entreprise",
+      "timeRequired": "PT14H"
+    },
+    {
+      "@type": "Course",
+      "@id": "https://ncr-solutions.fr/formation-sst.html#mac-sst",
+      "name": "Maintien et actualisation des compétences SST (MAC SST)",
+      "description": "Maintien et actualisation des compétences des Sauveteurs Secouristes du Travail déjà formés.",
+      "url": "https://ncr-solutions.fr/formation-sst.html",
+      "inLanguage": "fr-FR",
+      "provider": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "instructor": {
+        "@id": "https://ncr-solutions.fr/a-propos.html#nacer-hamadi"
+      },
+      "courseMode": "Présentiel en intra-entreprise",
+      "timeRequired": "PT7H"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ncr-solutions.fr/formation-sst.html#webpage",
+      "url": "https://ncr-solutions.fr/formation-sst.html",
+      "name": "Formateur SST à Fréjus",
+      "description": "Formateur SST à Fréjus et dans le Var : formation initiale Sauveteur Secouriste du Travail et maintien et actualisation des compétences MAC SST.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ncr-solutions.fr/#website"
+      },
+      "publisher": {
+        "@id": "https://ncr-solutions.fr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ncr-solutions.fr/#logo"
+      },
+      "breadcrumb": {
+        "@id": "https://ncr-solutions.fr/formation-sst.html#breadcrumb"
+      },
+      "about": {
+        "@id": "https://ncr-solutions.fr/formation-sst.html#main-entity"
+      },
+      "mainEntity": {
+        "@id": "https://ncr-solutions.fr/formation-sst.html#main-entity"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://ncr-solutions.fr/formation-sst.html#main-entity",
+      "name": "Formations SST proposées",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://ncr-solutions.fr/formation-sst.html#formation-sst"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://ncr-solutions.fr/formation-sst.html#mac-sst"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ncr-solutions.fr/formation-sst.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://ncr-solutions.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Formations",
+          "item": "https://ncr-solutions.fr/formations.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Formateur SST à Fréjus",
+          "item": "https://ncr-solutions.fr/formation-sst.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <header class="gsap-header">
+        <a href="/" class="logo-container" style="display:flex; align-items:center; gap:12px;">
+            <img src="logo.png" alt="Logo N.C.R" style="height:40px;">
+            <div class="logo-text" style="font-weight:900; font-size:1.2rem; letter-spacing:-0.5px;">N.C.R<span> SOLUTIONS</span></div>
+        </a>
+        <nav><a href="formations.html">← Catalogue</a></nav>
+    </header>
+
+    <main style="flex: 1;">
+        
+        <section class="course-hero">
+            <div class="badge gsap-fade">Santé & Sécurité au Travail</div>
+            <h1 class="gsap-title">Devenez un maillon vital pour votre entreprise</h1>
+            <p class="gsap-subtitle">Avec un formateur SST à Fréjus et dans le Var, apprenez à prévenir les risques professionnels et à intervenir efficacement face à une situation d'accident.</p>
+        </section>
+
+        <section class="split-view-container">
+            
+            <div class="split-card gsap-stagger">
+                <div class="split-header">
+                    <h2>Formation<br>Initiale SST</h2>
+                    <div class="duration-tag">14 Heures</div>
+                </div>
+                <ul class="split-list">
+                    <li>Acquérir les bases de la prévention des risques professionnels.</li>
+                    <li>Savoir examiner la victime et alerter les secours.</li>
+                    <li>Maîtriser les gestes de premiers secours (réanimation, saignements, étouffements...).</li>
+                    <li>Délivrance du certificat SST (valable 24 mois).</li>
+                </ul>
+                <div class="target-audience">
+                    <strong>Pour qui ?</strong>
+                    Tout salarié désigné pour porter secours en cas d'accident et participer à la démarche de prévention dans son entreprise. Aucun prérequis.
+                </div>
+            </div>
+
+            <div class="split-card gsap-stagger">
+                <div class="split-header">
+                    <h2>Recyclage<br>MAC SST</h2>
+                    <div class="duration-tag">7 Heures</div>
+                </div>
+                <ul class="split-list">
+                    <li>Maintien et Actualisation des Compétences (MAC).</li>
+                    <li>Révision des gestes d'urgence et mises en situation.</li>
+                    <li>Actualisation des connaissances réglementaires.</li>
+                    <li>Prolongation de la validité du certificat SST pour 24 mois.</li>
+                </ul>
+                <div class="target-audience">
+                    <strong>Pour qui ?</strong>
+                    Sauveteurs Secouristes du Travail déjà certifiés, devant renouveler leur carte avant la date d'échéance (tous les 2 ans).
+                </div>
+            </div>
+
+        </section>
+
+        <section class="program-section gsap-fade">
+            <h3 class="program-title">Les 4 piliers de l'intervention</h3>
+            <div class="program-grid">
+                
+                <div class="program-box">
+                    <div class="box-number">01</div>
+                    <h4>Protéger</h4>
+                    <p>Analyser la situation d'accident, repérer les dangers persistants et mettre en œuvre une protection adaptée pour soi, la victime et les autres.</p>
+                </div>
+                
+                <div class="program-box">
+                    <div class="box-number">02</div>
+                    <h4>Examiner</h4>
+                    <p>Savoir repérer l'urgence vitale : la victime saigne-t-elle abondamment ? S'étouffe-t-elle ? Répond-elle ? Respire-t-elle ?</p>
+                </div>
+                
+                <div class="program-box">
+                    <div class="box-number">03</div>
+                    <h4>Alerter</h4>
+                    <p>Faire alerter ou alerter soi-même les secours de manière claire, précise et efficace selon l'organisation interne de l'entreprise.</p>
+                </div>
+
+                <div class="program-box">
+                    <div class="box-number">04</div>
+                    <h4>Secourir</h4>
+                    <p>Effectuer les gestes de secours appropriés à l'état de la victime (compressions, défibrillateur, PLS) dans l'attente des secours.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section gsap-fade">
+            <p style="font-weight: 700; color: var(--text-dim); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Formation Intra-Entreprise (Sur site)</p>
+            <a href="contact.html" class="btn-sst">Demander un devis personnalisé</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="footer-wrapper">
+        <div class="footer-brand">
+          <h2 style="font-family: 'Inter', sans-serif; font-weight: 900; letter-spacing: -1px;">N.C.R Solutions</h2>
+          <p>Formations professionnelles & solutions digitales pour entreprises modernes. Nous aidons les structures à monter en compétence et en performance.</p>
+          <div class="footer-pill">Training partner • France</div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="/">Accueil</a>
+            <a href="formations.html">Formations</a>
+            <a href="impact.html">Impact</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Formations</h4>
+            <a href="formation1.html">Communication digitale</a>
+            <a href="formation2.html">Outils numériques</a>
+            <a href="formation3.html">Gestion des litiges</a>
+            <a href="formation-reseaux.html">Réseaux sociaux</a>
+            <a href="accompagnement-ponctuel.html">Accompagnement</a>
+          </div>
+          <div class="footer-col">
+            <h4>Légal</h4>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="cgu.html">CGU</a>
+            <a href="cgv.html">CGV</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 N.C.R Solutions — Tous droits réservés.</span>
+        <div class="contact-bar">
+          <a href="https://www.linkedin.com/in/nacer-hamadi-7b6476375" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.5-2.7 5.1-2.7C23 6.6 24 9 24 12.6V24h-5v-9.8c0-2.3 0-5.2-3.2-5.2s-3.7 2.5-3.7 5V24H8V7z"/></svg>
+          </a>
+          <a href="tel:+33621972139" class="contact-item">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+          </a>
+          <a href="mailto:ncr-formations@outlook.fr" class="contact-item">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+        <span class="footer-meta">Designed with precision & simplicity</span>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header et Titre
+        gsap.from(".gsap-header", { y: -20, opacity: 0, duration: 1, ease: "power3.out" });
+        gsap.from(".gsap-fade", { y: 20, opacity: 0, duration: 1, ease: "power3.out" });
+        gsap.from(".gsap-title", { y: 30, opacity: 0, duration: 1, ease: "power4.out", delay: 0.1 });
+        gsap.from(".gsap-subtitle", { y: 20, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
+
+        // Cartes Initiale vs MAC
+        gsap.from(".gsap-stagger", {
+            scrollTrigger: { trigger: ".split-view-container", start: "top 85%" },
+            y: 40, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out"
+        });
+
+        // Grille des 4 étapes
+        gsap.from(".program-box", {
+            scrollTrigger: { trigger: ".program-grid", start: "top 85%" },
+            y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: "back.out(1.2)"
+        });
+    </script>
+</body>
+</html>
+
+```
