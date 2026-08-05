@@ -2,346 +2,256 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#fbfbfd">
-
-  <title>Portfolio immersif Web & Mobile | N.C.R Solutions</title>
-  <meta name="description" content="Découvrez les réalisations web, PWA et mobile de N.C.R Solutions au sein d’une expérience immersive WebGL pilotée par le défilement.">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="author" content="N.C.R Solutions">
-  <link rel="canonical" href="https://www.ncr-solutions.fr/portfolio.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="N.C.R Solutions">
-  <meta property="og:title" content="Portfolio immersif | N.C.R Solutions">
-  <meta property="og:description" content="Applications métier, PWA, mobile et sites web conçus avec une exigence produit et une expérience immersive.">
-  <meta property="og:url" content="https://www.ncr-solutions.fr/portfolio.html">
-  <meta property="og:image" content="https://www.ncr-solutions.fr/logo.png">
-
-  <link rel="icon" type="image/png" href="favicon.png?v=3">
-  <link rel="apple-touch-icon" href="favicon.png?v=3">
+  <meta name="color-scheme" content="light">
+  <title>Portfolio 3D immersif | N.C.R Solutions</title>
+  <meta name="description" content="Portfolio 3D immersif de N.C.R Solutions : NCR Suite, Sentinelle Pro, application SST et sites Azzera.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://ncr-solutions.fr/portfolio.html">
+  <link rel="icon" type="image/png" href="favicon.png?v=6">
+  <link rel="apple-touch-icon" href="favicon.png?v=6">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio-webgl.css">
-
-  <noscript>
-    <style>
-      .webgl-layer{display:none!important}.journey-stage{position:relative!important}.journey{height:auto!important}
-      .journey-scene{position:relative!important;opacity:1!important;visibility:visible!important;min-height:auto!important;padding:8rem 0!important}
-      .scene-method,.scene-project-preview{display:block!important}.scroll-hint{display:none!important}
-    </style>
-  </noscript>
+  <link rel="stylesheet" href="portfolio-3d.css">
 </head>
-<body class="portfolio-webgl-page">
-  <a class="skip-link" href="#projects">Aller aux projets</a>
+<body>
+  <a class="skip-link" href="#projets">Aller aux projets</a>
 
   <div class="page-progress" aria-hidden="true"><span data-page-progress></span></div>
 
   <header class="site-header" data-header>
     <a class="brand" href="/" aria-label="N.C.R Solutions — Accueil">
       <img src="logo-mark.png" alt="" width="42" height="42">
-      <span class="brand-copy"><strong>N.C.R</strong><small>SOLUTIONS</small></span>
+      <span>N.C.R <b>SOLUTIONS</b></span>
     </a>
-
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
-      <span></span><span></span>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+      <i></i><i></i>
     </button>
-
     <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
       <a href="/">Accueil</a>
       <a href="solutions-digitales.html">Solutions digitales</a>
       <a href="portfolio.html" aria-current="page">Portfolio</a>
       <a href="formations.html">Formations</a>
       <a href="a-propos.html">À propos</a>
-      <a class="nav-cta" href="contact.html">Discuter d’un projet <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="contact.html">Parler d’un projet <span>↗</span></a>
     </nav>
   </header>
 
   <main>
-    <section class="journey" id="experience" aria-label="Expérience immersive N.C.R Solutions">
-      <div class="journey-stage" data-journey-stage>
-        <div class="ambient ambient-one" aria-hidden="true"></div>
-        <div class="ambient ambient-two" aria-hidden="true"></div>
-        <canvas class="webgl-layer" data-webgl-canvas aria-label="Objet cristallin animé en trois dimensions"></canvas>
-        <div class="webgl-fallback" data-webgl-fallback aria-hidden="true">
-          <div class="fallback-ring ring-a"></div><div class="fallback-ring ring-b"></div><div class="fallback-ring ring-c"></div>
+    <section class="journey" data-journey aria-labelledby="hero-title">
+      <div class="journey-sticky">
+        <canvas class="webgl-canvas" data-webgl aria-label="Animation 3D cristalline pilotée par le défilement"></canvas>
+        <div class="canvas-fallback" data-canvas-fallback hidden>
+          <span></span><span></span><span></span>
+        </div>
+        <div class="studio-grid" aria-hidden="true"></div>
+        <div class="studio-aura studio-aura--a" aria-hidden="true"></div>
+        <div class="studio-aura studio-aura--b" aria-hidden="true"></div>
+
+        <div class="scene scene--hero is-active" data-scene="0">
+          <div class="hero-copy">
+            <p class="eyebrow"><i></i> Portfolio immersif B2B</p>
+            <h1 id="hero-title"><span>L’EXCELLENCE</span><span>OPÉRATIONNELLE</span></h1>
+            <p class="hero-lead">Des produits numériques conçus pour être compris, adoptés et utilisés sur le terrain.</p>
+          </div>
+
+          <article class="glass-card hero-card hero-card--left">
+            <span>CONCEPTION</span>
+            <strong>Du besoin réel<br>à l’interface évidente.</strong>
+            <p>UX, architecture, design system et développement dans une même logique.</p>
+          </article>
+
+          <article class="glass-card hero-card hero-card--right">
+            <span>EXÉCUTION</span>
+            <strong>Web, mobile<br>et applications métier.</strong>
+            <p>Des expériences performantes, responsables et adaptées aux usages réels.</p>
+          </article>
+
+          <div class="scroll-cue" aria-hidden="true">
+            <span>Scrollez pour expérimenter</span>
+            <i><b></b></i>
+          </div>
         </div>
 
-        <div class="journey-rail" aria-hidden="true">
-          <span class="journey-rail__line"><i data-journey-progress></i></span>
-          <span class="journey-rail__label" data-scene-label>01 — Entrée</span>
+        <div class="scene scene--method" data-scene="1">
+          <div class="method-copy">
+            <p class="eyebrow"><i></i> Scène 2 · L’inception du projet</p>
+            <h2>MÉTHODOLOGIE<br>IMMERSIVE</h2>
+            <p>La caméra traverse la structure pendant que le projet passe de l’intention à un système réellement exploitable.</p>
+          </div>
+
+          <article class="glass-card process-card">
+            <div class="process-card__head">
+              <span>PROCESSUS MAÎTRISÉ</span>
+              <b>01—04</b>
+            </div>
+            <h3>Du problème terrain<br>au produit final.</h3>
+            <ol>
+              <li><i>01</i><div><strong>Observer</strong><small>Usages, contraintes et priorités.</small></div></li>
+              <li><i>02</i><div><strong>Structurer</strong><small>Parcours, données et rôles.</small></div></li>
+              <li><i>03</i><div><strong>Construire</strong><small>Design system et développement.</small></div></li>
+              <li><i>04</i><div><strong>Mesurer</strong><small>Tests, performance et itérations.</small></div></li>
+            </ol>
+          </article>
+
+          <article class="glass-card quality-card">
+            <span>QUALITÉ D’EXÉCUTION</span>
+            <h3>La technologie disparaît.<br>L’usage devient évident.</h3>
+            <div class="quality-pills"><b>Responsive</b><b>Accessible</b><b>Rapide</b><b>Évolutif</b></div>
+          </article>
         </div>
 
-        <section class="journey-scene scene-hero is-active" data-scene="hero" aria-labelledby="portfolio-title">
-          <div class="scene-shell hero-layout">
-            <div class="hero-heading">
-              <p class="eyebrow"><span></span> Portfolio immersif B2B</p>
-              <h1 id="portfolio-title">
-                <span>L’EXCELLENCE</span>
-                <span>OPÉRATIONNELLE</span>
-              </h1>
-              <p class="hero-lead">Des produits numériques pensés pour le terrain, mis en scène dans une expérience qui relie design, technologie et performance.</p>
-              <div class="hero-actions">
-                <a class="button button-dark" href="#projects">Découvrir les projets <span aria-hidden="true">↓</span></a>
-                <a class="button button-ghost" href="contact.html">Parler de votre projet <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-
-            <div class="hero-card hero-card--modules glass-card" data-float-card="1">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg>
-              </span>
-              <small>Modules</small>
-              <strong>Applications métier</strong>
-              <p>Des interfaces conçues autour des usages réels, des rôles et des priorités terrain.</p>
-            </div>
-
-            <div class="hero-card hero-card--examples glass-card" data-float-card="2">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 19V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v11"/><path d="M2 19h20M8 6V4h8v2"/></svg>
-              </span>
-              <small>Exemples</small>
-              <strong>Interfaces concrètes</strong>
-              <p>NCR Suite, Sentinelle Pro, application SST et écosystème web Azzera.</p>
-            </div>
-
-            <div class="hero-card hero-card--formation glass-card" data-float-card="3">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="m3 10 9-5 9 5-9 5-9-5Z"/><path d="M7 12.5V17c3 2 7 2 10 0v-4.5M21 10v6"/></svg>
-              </span>
-              <small>Formation</small>
-              <strong>Expérience pédagogique</strong>
-              <p>Des parcours mobiles simples à reprendre, à comprendre et à utiliser.</p>
-            </div>
-
-            <div class="scroll-hint" aria-hidden="true">
-              <span>Scrollez pour expérimenter</span>
-              <i><b></b></i>
-            </div>
+        <div class="scene scene--transition" data-scene="2">
+          <div class="transition-copy">
+            <p class="eyebrow"><i></i> Scène 3 · La matière devient produit</p>
+            <h2>LA 3D<br>DEVIENT RÉELLE.</h2>
+            <p>La plongée débouche sur des interfaces conçues, développées et utilisées dans des contextes professionnels concrets.</p>
+            <a href="#projets" class="button button--dark">Découvrir les projets <span>↓</span></a>
           </div>
-        </section>
-
-        <section class="journey-scene scene-method" data-scene="method" aria-labelledby="methodology-title">
-          <div class="scene-shell method-layout">
-            <div class="method-copy">
-              <p class="eyebrow"><span></span> Scène 2 — L’inception du projet</p>
-              <h2 id="methodology-title">MÉTHODOLOGIE<br>IMMERSIVE</h2>
-              <p>La caméra plonge au cœur du système. Chaque étape se connecte à la suivante sans rupture : comprendre, structurer, prototyper, développer et fiabiliser.</p>
-            </div>
-
-            <div class="process-card glass-card">
-              <div class="process-card__head">
-                <span class="card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="m12 3 2.4 5.2L20 9l-4 4 .9 5.7L12 16l-4.9 2.7L8 13 4 9l5.6-.8L12 3Z"/></svg>
-                </span>
-                <div><small>Processus</small><strong>PROCESSUS CERTIFIÉ</strong></div>
-              </div>
-              <ol class="process-steps">
-                <li><span>01</span><div><strong>Besoin réel</strong><small>Contraintes, terrain et priorité.</small></div></li>
-                <li><span>02</span><div><strong>Architecture UX</strong><small>Parcours et informations avant l’habillage.</small></div></li>
-                <li><span>03</span><div><strong>Prototype produit</strong><small>Validation rapide des usages essentiels.</small></div></li>
-                <li><span>04</span><div><strong>Développement</strong><small>Composants robustes et responsive.</small></div></li>
-                <li><span>05</span><div><strong>Fiabilisation</strong><small>Tests, performance et accessibilité.</small></div></li>
-              </ol>
-            </div>
-
-            <div class="method-orbit method-orbit--one glass-card">
-              <small>Principe directeur</small>
-              <strong>La technologie doit disparaître derrière l’usage.</strong>
-            </div>
-            <div class="method-orbit method-orbit--two glass-card">
-              <small>Résultat attendu</small>
-              <strong>Une interface évidente dès la première seconde.</strong>
-            </div>
+          <div class="transition-labels" aria-hidden="true">
+            <span>NCR SUITE</span><span>SENTINELLE PRO</span><span>APPLICATION SST</span><span>SITES AZZERA</span>
           </div>
-        </section>
-
-        <section class="journey-scene scene-project-preview" data-scene="preview" aria-labelledby="preview-title">
-          <div class="scene-shell preview-layout">
-            <div class="preview-copy">
-              <p class="eyebrow"><span></span> Scène 3 — La sortie</p>
-              <h2 id="preview-title">LA 3D DEVIENT<br>PRODUIT.</h2>
-              <p>La matière cristalline se transforme en interfaces réelles. Chaque plaque révèle un projet conçu et développé pour un besoin précis.</p>
-            </div>
-
-            <figure class="preview-plate preview-plate--suite glass-card">
-              <img src="assets/portfolio/ncr-suite-dashboard.webp" alt="Tableau de bord de NCR Suite" loading="eager">
-              <figcaption><span>01</span><strong>NCR Suite</strong><small>SaaS multi-métier</small></figcaption>
-            </figure>
-            <figure class="preview-plate preview-plate--sentinelle glass-card">
-              <img src="assets/portfolio/sentinelle-dashboard.webp" alt="Dashboard QG de Sentinelle Pro" loading="eager">
-              <figcaption><span>02</span><strong>Sentinelle Pro</strong><small>Supervision opérationnelle</small></figcaption>
-            </figure>
-            <figure class="preview-plate preview-plate--sst glass-card">
-              <img src="assets/portfolio/sst-home.webp" alt="Accueil de l’application SST NCR Solutions" loading="eager">
-              <figcaption><span>03</span><strong>Application SST</strong><small>Formation mobile</small></figcaption>
-            </figure>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="skills-marquee" aria-label="Expertises techniques">
-      <div class="marquee-track" data-marquee-track>
-        <div class="marquee-group">
-          <span>FRONT-END PREMIUM</span><i>✦</i><span>APPLICATIONS MÉTIER</span><i>✦</i><span>GSAP & MICRO-INTERACTIONS</span><i>✦</i><span>RESPONSIVE MOBILE-FIRST</span><i>✦</i><span>PERFORMANCE & SEO</span><i>✦</i><span>WEBGL IMMERSIF</span><i>✦</i>
         </div>
-        <div class="marquee-group" aria-hidden="true">
-          <span>FRONT-END PREMIUM</span><i>✦</i><span>APPLICATIONS MÉTIER</span><i>✦</i><span>GSAP & MICRO-INTERACTIONS</span><i>✦</i><span>RESPONSIVE MOBILE-FIRST</span><i>✦</i><span>PERFORMANCE & SEO</span><i>✦</i><span>WEBGL IMMERSIF</span><i>✦</i>
+
+        <div class="scene-index" aria-hidden="true">
+          <span data-scene-index>01 — ENTRÉE</span>
+          <i><b data-journey-progress></b></i>
+          <small>03</small>
+        </div>
+
+        <div class="skills-marquee" aria-label="Expertises clés">
+          <div class="skills-track">
+            <span>FRONT-END PREMIUM</span><i>✦</i><span>APPLICATIONS MÉTIER</span><i>✦</i><span>GSAP & MICRO-INTERACTIONS</span><i>✦</i><span>RESPONSIVE MOBILE-FIRST</span><i>✦</i><span>PERFORMANCE & SEO</span><i>✦</i>
+            <span aria-hidden="true">FRONT-END PREMIUM</span><i aria-hidden="true">✦</i><span aria-hidden="true">APPLICATIONS MÉTIER</span><i aria-hidden="true">✦</i><span aria-hidden="true">GSAP & MICRO-INTERACTIONS</span><i aria-hidden="true">✦</i><span aria-hidden="true">RESPONSIVE MOBILE-FIRST</span><i aria-hidden="true">✦</i><span aria-hidden="true">PERFORMANCE & SEO</span><i aria-hidden="true">✦</i>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="content-shell">
-        <div class="section-heading">
+    <section class="projects-section" id="projets" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-heading reveal">
           <div>
-            <p class="eyebrow"><span></span> Réalisations réelles</p>
+            <p class="eyebrow"><i></i> Réalisations réelles</p>
             <h2 id="projects-title">QUELQUES<br>PROJETS CLÉS</h2>
           </div>
-          <p>Des produits conçus à partir de besoins métier concrets. Les visuels présentés ci-dessous proviennent des interfaces réellement réalisées.</p>
+          <p>Des interfaces métier, des applications mobiles et des écosystèmes web construits à partir de problématiques concrètes.</p>
         </div>
 
-        <div class="project-filters" role="group" aria-label="Filtrer les projets">
-          <button class="filter-pill is-active" type="button" data-filter="all" aria-pressed="true">Tous</button>
-          <button class="filter-pill" type="button" data-filter="saas" aria-pressed="false">SaaS</button>
-          <button class="filter-pill" type="button" data-filter="pwa" aria-pressed="false">PWA</button>
-          <button class="filter-pill" type="button" data-filter="web" aria-pressed="false">Web</button>
-          <button class="filter-pill" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+        <div class="project-filters reveal" role="group" aria-label="Filtrer les projets">
+          <button class="is-active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button type="button" data-filter="saas" aria-pressed="false">SaaS</button>
+          <button type="button" data-filter="pwa" aria-pressed="false">PWA</button>
+          <button type="button" data-filter="web" aria-pressed="false">Web</button>
         </div>
 
         <div class="projects-bento">
-          <article class="project-card project-card--suite" data-category="saas pwa" data-project="suite">
+          <article class="project-card project-card--suite reveal" data-category="saas pwa">
             <div class="project-card__copy">
-              <div class="project-card__meta"><span>01</span><small>SaaS · Plateforme métier</small></div>
-              <h3>NCR Suite</h3>
-              <p>Une plateforme modulaire qui centralise les opérations, les documents et les parcours propres à plusieurs métiers.</p>
-              <ul><li>Architecture multi-organisation</li><li>Parcours formation et gestion métier</li><li>Dashboard, documents et automatisations</li></ul>
-              <button class="project-link" type="button" data-open-project="suite">Explorer le projet <span aria-hidden="true">↗</span></button>
+              <div class="project-card__meta"><span>01</span><small>SaaS multi-métier</small></div>
+              <h3>NCR <b>Suite</b></h3>
+              <p>Une plateforme modulaire qui centralise pilotage, sessions, documents et indicateurs dans une expérience métier cohérente.</p>
+              <button type="button" data-open-project="suite">Explorer le projet <span>↗</span></button>
             </div>
-            <div class="project-card__visual project-card__visual--double">
-              <img class="visual-main" src="assets/portfolio/ncr-suite-dashboard.webp" alt="Tableau de bord NCR Suite" loading="lazy">
-              <img class="visual-float" src="assets/portfolio/ncr-suite-login.webp" alt="Écran de connexion NCR Suite" loading="lazy">
+            <div class="project-card__media project-card__media--suite">
+              <img src="assets/portfolio/ncr-suite-dashboard.webp" alt="Tableau de bord NCR Suite" loading="lazy">
+              <img src="assets/portfolio/ncr-suite-login.webp" alt="Connexion NCR Suite" loading="lazy">
             </div>
           </article>
 
-          <article class="project-card project-card--sentinelle" data-category="pwa saas" data-project="sentinelle">
+          <article class="project-card project-card--sentinelle reveal" data-category="pwa">
             <div class="project-card__copy">
-              <div class="project-card__meta"><span>02</span><small>PWA · Sécurité privée</small></div>
-              <h3>Sentinelle Pro</h3>
-              <p>Une expérience connectée entre les agents de terrain et le centre de commandement, avec accès rapide aux fonctions critiques.</p>
-              <ul><li>Dashboard QG temps réel</li><li>Carte opérationnelle et missions</li><li>Expérience mobile-first et offline</li></ul>
-              <button class="project-link" type="button" data-open-project="sentinelle">Explorer le projet <span aria-hidden="true">↗</span></button>
+              <div class="project-card__meta"><span>02</span><small>Centre opérationnel</small></div>
+              <h3>Sentinelle <b>Pro</b></h3>
+              <p>Supervision temps réel, agents, sites, alertes et missions dans une interface conçue pour le terrain et le QG.</p>
+              <button type="button" data-open-project="sentinelle">Explorer le projet <span>↗</span></button>
             </div>
-            <div class="project-card__visual project-card__visual--double">
-              <img class="visual-main" src="assets/portfolio/sentinelle-dashboard.webp" alt="Dashboard QG Sentinelle Pro" loading="lazy">
-              <img class="visual-float visual-float--left" src="assets/portfolio/sentinelle-menu.webp" alt="Menu opérationnel Sentinelle Pro" loading="lazy">
+            <div class="project-card__media project-card__media--sentinelle">
+              <img src="assets/portfolio/sentinelle-dashboard.webp" alt="Dashboard QG Sentinelle Pro" loading="lazy">
+              <img src="assets/portfolio/sentinelle-menu.webp" alt="Menu opérationnel Sentinelle Pro" loading="lazy">
             </div>
           </article>
 
-          <article class="project-card project-card--sst" data-category="mobile pwa" data-project="sst">
+          <article class="project-card project-card--sst reveal" data-category="pwa">
             <div class="project-card__copy">
-              <div class="project-card__meta"><span>03</span><small>Mobile · Formation SST</small></div>
-              <h3>Application SST NCR Solutions</h3>
-              <p>Une application dédiée à la formation et à la révision SST : sessions live, modules courts, progression et quiz interactifs.</p>
-              <button class="project-link" type="button" data-open-project="sst">Explorer le projet <span aria-hidden="true">↗</span></button>
+              <div class="project-card__meta"><span>03</span><small>Application mobile</small></div>
+              <h3>Application SST<br><b>NCR Solutions</b></h3>
+              <p>Formation et révision SST avec espace élève, session live, modules thématiques et quiz interactifs.</p>
+              <button type="button" data-open-project="sst">Explorer le projet <span>↗</span></button>
             </div>
-            <div class="mobile-showcase" aria-hidden="true">
-              <img src="assets/portfolio/sst-home.webp" alt="">
-              <img src="assets/portfolio/sst-modules.webp" alt="">
-              <img src="assets/portfolio/sst-quiz.webp" alt="">
+            <div class="project-card__media project-card__media--phones">
+              <img src="assets/portfolio/sst-home.webp" alt="Accueil de l’application SST" loading="lazy">
+              <img src="assets/portfolio/sst-modules.webp" alt="Modules de révision SST" loading="lazy">
+              <img src="assets/portfolio/sst-quiz.webp" alt="Quiz SST" loading="lazy">
             </div>
           </article>
 
-          <article class="project-card project-card--azzera" data-category="web" data-project="azzera">
+          <article class="project-card project-card--azzera reveal" data-category="web">
             <div class="project-card__copy">
-              <div class="project-card__meta"><span>04</span><small>Web · Écosystème multi-sites</small></div>
-              <h3>Sites internet Azzera</h3>
-              <p>Trois univers éditoriaux distincts, réunis par une logique de groupe : Azzera Invest, Azzera Services+ et Azzera Academy.</p>
-              <button class="project-link" type="button" data-open-project="azzera">Explorer le projet <span aria-hidden="true">↗</span></button>
+              <div class="project-card__meta"><span>04</span><small>Écosystème web</small></div>
+              <h3>Sites <b>Azzera</b></h3>
+              <p>Une famille de sites pour Azzera Invest, Azzera Services+ et Azzera Academy, chacun avec sa voix et sa couleur métier.</p>
+              <button type="button" data-open-project="azzera">Explorer le projet <span>↗</span></button>
             </div>
-            <div class="website-stack" aria-hidden="true">
-              <img src="assets/portfolio/azzera-invest.webp" alt="">
-              <img src="assets/portfolio/azzera-services.webp" alt="">
-              <img src="assets/portfolio/azzera-academy.webp" alt="">
+            <div class="project-card__media project-card__media--azzera">
+              <img src="assets/portfolio/azzera-invest.webp" alt="Site Azzera Invest" loading="lazy">
+              <img src="assets/portfolio/azzera-services.webp" alt="Site Azzera Services+" loading="lazy">
+              <img src="assets/portfolio/azzera-academy.webp" alt="Site Azzera Academy" loading="lazy">
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="value-section" aria-labelledby="value-title">
-      <div class="content-shell">
-        <div class="section-heading section-heading--compact">
-          <div><p class="eyebrow"><span></span> Système de conception</p><h2 id="value-title">UNE MÉTHODE<br>CENTRÉE SUR LA VALEUR</h2></div>
+    <section class="approach-section" aria-labelledby="approach-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow"><i></i> Une méthode complète</p><h2 id="approach-title">CONCEVOIR JUSTE.<br>EXÉCUTER PROPREMENT.</h2></div>
+          <p>Le design, le développement et la performance sont traités comme un seul système, pas comme trois prestations séparées.</p>
         </div>
-        <div class="value-grid">
-          <article><span>01</span><div class="value-icon">⌁</div><h3>UX/UI Design</h3><p>Des parcours clairs, une hiérarchie évidente et des détails utiles.</p></article>
-          <article><span>02</span><div class="value-icon">&lt;/&gt;</div><h3>Développement sur mesure</h3><p>Une base adaptée au besoin, sans empiler des fonctionnalités inutiles.</p></article>
-          <article><span>03</span><div class="value-icon">ϟ</div><h3>Performance</h3><p>Des animations maîtrisées et une expérience fluide sur chaque écran.</p></article>
-          <article><span>04</span><div class="value-icon">◇</div><h3>Design system</h3><p>Des composants cohérents, réutilisables et faciles à faire évoluer.</p></article>
-          <article><span>05</span><div class="value-icon">◎</div><h3>Fiabilisation</h3><p>Tests, accessibilité et comportements de secours intégrés dès la conception.</p></article>
+        <div class="approach-grid">
+          <article class="approach-card reveal"><span>01</span><i>⌁</i><h3>UX/UI Design</h3><p>Parcours lisibles, hiérarchie claire et interactions centrées sur l’usage.</p></article>
+          <article class="approach-card reveal"><span>02</span><i>&lt;/&gt;</i><h3>Développement</h3><p>Code structuré, composants réutilisables et comportement responsive maîtrisé.</p></article>
+          <article class="approach-card reveal"><span>03</span><i>↯</i><h3>Performance</h3><p>Chargement optimisé, animations mesurées et expérience fluide sur chaque écran.</p></article>
+          <article class="approach-card reveal"><span>04</span><i>▦</i><h3>Design System</h3><p>Cohérence visuelle et fonctionnelle sur l’ensemble des produits et des pages.</p></article>
         </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <div class="content-shell">
-        <div class="cta-card">
-          <div class="cta-copy">
-            <p class="eyebrow"><span></span> Prochaine scène</p>
-            <h2>CONSTRUISONS<br>VOTRE PROCHAIN PROJET.</h2>
-            <p>Site vitrine, application métier, PWA ou expérience immersive : partons du problème réel pour créer une solution claire et durable.</p>
-            <a class="button button-dark" href="contact.html">Discuter du projet <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="cta-sculpture" aria-hidden="true">
-            <i></i><i></i><i></i><b></b>
-          </div>
+      <div class="shell">
+        <div class="cta-card reveal">
+          <div><p class="eyebrow"><i></i> Prêt à construire ?</p><h2>DONNONS DE LA<br>PROFONDEUR À VOTRE PROJET.</h2><p>Site vitrine, produit SaaS, PWA ou application métier : partons du problème réel pour créer une expérience mémorable et utile.</p></div>
+          <a class="button button--dark" href="contact.html">Parler de votre projet <span>↗</span></a>
+          <div class="cta-orbit" aria-hidden="true"><i></i><i></i><b></b></div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="content-shell footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Retour à l’accueil">
-          <img src="logo-mark.png" alt="" width="38" height="38">
-          <span class="brand-copy"><strong>N.C.R</strong><small>SOLUTIONS</small></span>
-        </a>
-        <p>Conception de produits web, mobile et expériences numériques sur mesure.</p>
-      </div>
-      <nav aria-label="Navigation de pied de page"><strong>Navigation</strong><a href="/">Accueil</a><a href="portfolio.html">Portfolio</a><a href="solutions-digitales.html">Solutions digitales</a><a href="a-propos.html">À propos</a></nav>
-      <nav aria-label="Expertises"><strong>Expertises</strong><a href="creation-site-internet.html">Sites internet</a><a href="solutions-digitales.html">Applications métier</a><a href="formations.html">Formation</a><a href="contact.html">Contact</a></nav>
-      <nav aria-label="Informations légales"><strong>Informations</strong><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgu.html">CGU</a><a href="cgv.html">CGV</a></nav>
+    <div class="shell footer-grid">
+      <div><a class="brand footer-brand" href="/"><img src="logo-mark.png" alt="" width="38" height="38"><span>N.C.R <b>SOLUTIONS</b></span></a><p>Conception d’expériences digitales, applications métier et formations professionnelles.</p></div>
+      <div><h3>Navigation</h3><a href="/">Accueil</a><a href="portfolio.html">Portfolio</a><a href="solutions-digitales.html">Solutions digitales</a><a href="a-propos.html">À propos</a></div>
+      <div><h3>Contact</h3><a href="mailto:ncr-formations@outlook.fr">ncr-formations@outlook.fr</a><a href="tel:+33621972139">06 21 97 21 39</a><a href="contact.html">Formulaire de contact</a></div>
     </div>
-    <div class="content-shell footer-bottom">
-      <span>© 2026 N.C.R SOLUTIONS. CONFIDENTIEL &amp; PROPRIÉTAIRE.</span>
-      <span>Fréjus · France</span>
-    </div>
+    <div class="shell footer-bottom"><span>© 2026 N.C.R SOLUTIONS. CONFIDENTIEL &amp; PROPRIÉTAIRE.</span><span>Fréjus · France</span></div>
   </footer>
 
-  <dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title">
-    <div class="dialog-panel">
-      <button class="dialog-close" type="button" data-close-dialog aria-label="Fermer">×</button>
-      <p class="eyebrow"><span></span> Étude de projet</p>
-      <h2 id="project-dialog-title" data-dialog-title></h2>
+  <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Fermer">×</button>
+    <div class="dialog-content">
+      <p class="eyebrow"><i></i> Étude du projet</p>
+      <h2 id="dialog-title" data-dialog-title></h2>
       <p class="dialog-lead" data-dialog-lead></p>
+      <div class="dialog-grid"><div><span>Enjeu</span><p data-dialog-challenge></p></div><div><span>Approche</span><p data-dialog-approach></p></div></div>
       <div class="dialog-gallery" data-dialog-gallery></div>
-      <div class="dialog-grid">
-        <div><small>Enjeu</small><p data-dialog-challenge></p></div>
-        <div><small>Approche</small><p data-dialog-approach></p></div>
-      </div>
-      <a class="button button-dark" href="contact.html">Parler d’un projet similaire <span aria-hidden="true">↗</span></a>
+      <a class="button button--dark" href="contact.html">Discuter d’un projet similaire <span>↗</span></a>
     </div>
   </dialog>
 
-  <!-- Versions CDN épinglées. Une scène WebGL native de secours reste disponible si elles ne se chargent pas. -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.1/three.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" defer></script>
-  <script src="portfolio-webgl.js" defer></script>
+  <script src="portfolio-3d.js" defer></script>
 </body>
 </html>

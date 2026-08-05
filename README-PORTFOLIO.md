@@ -1,22 +1,25 @@
-# Portfolio immersif — N.C.R Solutions
+# Portfolio 3D immersif — N.C.R Solutions
 
-## Fichiers principaux
+Cette version remplace entièrement l’ancien portfolio.
 
-- `portfolio.html` : page complète.
-- `portfolio-premium.css` : design system, responsive, objet cristallin et mises en page.
-- `portfolio-premium.js` : navigation, filtres, animations et scrollytelling.
-- `assets/portfolio/` : captures réelles de NCR Suite, Sentinelle Pro, application SST et sites Azzera.
+## Fonctionnement
 
-## Mise en ligne
+Le hero est une véritable scène WebGL composée de géométries 3D rendues en temps réel : arches cristallines, tunnel, éclairages, particules et caméra pilotée par la position du scroll.
 
-Déposer l’ensemble des fichiers à la racine du site en remplaçant les versions précédentes. Aucune compilation n’est nécessaire.
+La scène ne dépend d’aucun CDN. `portfolio.html` fonctionne directement après extraction du ZIP. Le lanceur Mac fournit simplement un environnement local similaire à un hébergement web.
 
-La page charge GSAP et ScrollTrigger depuis jsDelivr. En cas d’indisponibilité du CDN ou d’ouverture hors connexion, un comportement de secours natif maintient le défilement et les apparitions principales.
+## Fichiers
 
-## Contrôles réalisés
+- `portfolio.html`
+- `portfolio-3d.css`
+- `portfolio-3d.js`
+- `assets/portfolio/`
+- `Lancer le portfolio.command`
 
-- HTML et chemins des assets vérifiés.
-- JavaScript validé avec `node --check`.
-- Aucun débordement horizontal à 390 px et 1440 px.
-- Captures réelles contrôlées sur les versions ordinateur et mobile.
-- Respect de `prefers-reduced-motion`.
+## Tests réalisés
+
+- WebGL actif à 1440 × 900 et 390 × 844
+- aucun débordement horizontal
+- filtres opérationnels
+- fenêtres de projets opérationnelles
+- aucune erreur JavaScript relevée durant les tests
