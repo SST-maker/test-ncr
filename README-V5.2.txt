@@ -1,4 +1,4 @@
-N.C.R Solutions — Portfolio V5.2 Finition Luxe
+N.C.R Solutions — Portfolio V5.2 Finition Luxe 
 
 Cette version affine la V5.1 :
 - hero nettoyé et boutons cohérents
