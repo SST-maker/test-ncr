@@ -39,7 +39,10 @@
     wheelAccumulator: 0,
     scrollIdleTimer: 0,
     touchStartY: 0,
-    touchStartProgress: 0
+    touchStartProgress: 0,
+    wheelGestureConsumed: false,
+    wheelGestureTimer: 0,
+    snapCooldownUntil: 0
   };
 
   const clamp = (v, min = 0, max = 1) => Math.min(max, Math.max(min, v));
@@ -49,6 +52,39 @@
     return x * x * (3 - 2 * x);
   };
   const easeInOut = (t) => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  /*
+    V5.5 — points d'arrêt réellement distincts.
+    Les trois premiers chapitres décomposent l'entrée dans le robot ; les
+    étapes de méthode et les projets disposent ensuite chacun de leur arrêt.
+  */
+  const journeyChapters = [
+    { p:0,     label:'01 — ENTRÉE' },
+    { p:.115,  label:'02 — APPROCHE' },
+    { p:.235,  label:'03 — ÉCRAN' },
+    { p:.36,   label:'04 — PASSAGE' },
+    { p:.52,   label:'05 — OBSERVER' },
+    { p:.60,   label:'06 — STRUCTURER' },
+    { p:.68,   label:'07 — CONSTRUIRE' },
+    { p:.76,   label:'08 — AFFINER' },
+    { p:.83,   label:'09 — NCR SUITE' },
+    { p:.885,  label:'10 — SENTINELLE' },
+    { p:.94,   label:'11 — SST' },
+    { p:.985,  label:'12 — AZZERA' }
+  ];
+  const journeyStops = [...journeyChapters.map((chapter) => chapter.p), 1];
+  const showroomStops = [.52, .60, .68, .76];
+  const revealStops = [.83, .885, .94, .985];
+
+  function nearestIndexedStop(progress, stops) {
+    let best = 0;
+    let distance = Infinity;
+    stops.forEach((stop, index) => {
+      const current = Math.abs(stop - progress);
+      if (current < distance) { distance = current; best = index; }
+    });
+    return best;
+  }
 
   /* ------------------------------------------------------------------
      Header, menu, global progress
@@ -94,10 +130,10 @@
       2. son écran vient précisément au centre de la fenêtre ;
       3. seul le portail s'étend, le robot n'est plus sur-zoomé.
     */
-    const settle = smoothstep(.045, .135, progress);
-    const focus = smoothstep(.12, .245, progress);
-    const portal = smoothstep(.215, .355, progress);
-    const disappear = smoothstep(.265, .34, progress);
+    const settle = smoothstep(.035, .13, progress);
+    const focus = smoothstep(.105, .245, progress);
+    const portal = smoothstep(.225, .375, progress);
+    const disappear = smoothstep(.31, .405, progress);
     const idle = 1 - focus;
 
     const stageWidth = robotStage.offsetWidth || 400;
@@ -105,7 +141,8 @@
     const screenCenterX = .321 + .442 / 2;
     const screenCenterY = .5845 + .1835 / 2;
     const centeredShiftX = -(screenCenterX - .5) * stageWidth;
-    const centeredShiftY = -(screenCenterY - .5) * stageHeight;
+    /* La scène est placée à 53 % de la hauteur : on corrige aussi cet écart. */
+    const centeredShiftY = -(screenCenterY - .5) * stageHeight - innerHeight * .03;
 
     const initialShiftX = innerWidth < 640 ? 0 : Math.min(innerWidth * .23, 330);
     const initialShiftY = innerWidth < 640 ? innerHeight * .01 : innerHeight * .04;
@@ -114,8 +151,8 @@
     const shiftX = lerp(settleShiftX, centeredShiftX, easeInOut(focus));
     const shiftY = lerp(settleShiftY, centeredShiftY, easeInOut(focus));
 
-    const focusScale = innerWidth < 560 ? 2.02 : innerWidth < 900 ? 1.88 : 1.72;
-    const scale = lerp(1, 1.18, easeInOut(settle)) * lerp(1, focusScale / 1.18, easeInOut(focus));
+    const focusScale = innerWidth < 560 ? 1.72 : innerWidth < 900 ? 1.62 : 1.50;
+    const scale = lerp(1, 1.10, easeInOut(settle)) * lerp(1, focusScale / 1.10, easeInOut(focus));
     const tiltX = state.smoothPointerY * .85 * idle;
     const tiltY = state.smoothPointerX * 1.05 * idle;
 
@@ -141,10 +178,10 @@
   }
 
   function applyScenes(progress) {
-    const heroOpacity = 1 - smoothstep(.12, .255, progress);
-    const passageOpacity = smoothstep(.255, .325, progress) * (1 - smoothstep(.445, .505, progress));
-    const showroomOpacity = smoothstep(.455, .515, progress) * (1 - smoothstep(.785, .825, progress));
-    const revealOpacity = smoothstep(.775, .825, progress) * (1 - smoothstep(.997, 1, progress));
+    const heroOpacity = 1 - smoothstep(.17, .30, progress);
+    const passageOpacity = smoothstep(.285, .345, progress) * (1 - smoothstep(.435, .50, progress));
+    const showroomOpacity = smoothstep(.465, .515, progress) * (1 - smoothstep(.785, .835, progress));
+    const revealOpacity = smoothstep(.805, .84, progress) * (1 - smoothstep(.997, 1, progress));
     const values = [heroOpacity, passageOpacity, showroomOpacity, revealOpacity];
 
     scenes.forEach((scene, index) => {
@@ -152,7 +189,7 @@
       scene.style.opacity = opacity.toFixed(3);
       scene.style.visibility = opacity > .02 ? 'visible' : 'hidden';
       scene.classList.toggle('is-active', opacity > .42);
-      const anchors = [.10, .36, .64, .89];
+      const anchors = [.10, .36, .64, .90];
       const drift = (progress - anchors[index]) * -24;
       scene.style.transform = `translate3d(0, ${drift.toFixed(2)}px, 0)`;
     });
@@ -164,10 +201,8 @@
     });
 
     /* Quatre stations : chaque point d'arrêt correspond au centre d'une carte. */
-    const showroomWindow = smoothstep(.46,.515,progress) * (1-smoothstep(.79,.83,progress));
-    const showroomFlow = clamp((progress-.515)/.27);
-    const showroomFloat = showroomFlow * Math.max(1, showroomCards.length - 1);
-    const showroomActive = Math.min(showroomCards.length-1, Math.round(showroomFloat));
+    const showroomWindow = smoothstep(.465,.515,progress) * (1-smoothstep(.79,.835,progress));
+    const showroomActive = Math.min(showroomCards.length - 1, nearestIndexedStop(progress, showroomStops));
     showroomCards.forEach((card,index)=>{
       const active=index===showroomActive;
       const direction=index<showroomActive?-1:1;
@@ -182,10 +217,8 @@
     showroomRailItems.forEach((item,index)=>item.classList.toggle('is-active',index===showroomActive));
 
     /* Les projets disposent maintenant d'une vraie plage d'exposition. */
-    const revealWindow=smoothstep(.78,.825,progress)*(1-smoothstep(.997,1,progress));
-    const revealFlow=clamp((progress-.815)/.175);
-    const revealFloat=revealFlow*Math.max(1,revealCards.length-1);
-    const revealActive=Math.min(revealCards.length-1,Math.round(revealFloat));
+    const revealWindow=smoothstep(.805,.84,progress)*(1-smoothstep(.997,1,progress));
+    const revealActive=Math.min(revealCards.length-1,nearestIndexedStop(progress,revealStops));
     revealCards.forEach((card,index)=>{
       const active=index===revealActive;
       const direction=index<revealActive?-1:1;
@@ -201,20 +234,8 @@
 
     applyRobotDive(progress);
 
-    const chapterStops = [
-      { p:0, label:'01 — ENTRÉE' },
-      { p:.36, label:'02 — PASSAGE' },
-      { p:.535, label:'03 — OBSERVER' },
-      { p:.62, label:'04 — STRUCTURER' },
-      { p:.705, label:'05 — CONSTRUIRE' },
-      { p:.785, label:'06 — AFFINER' },
-      { p:.825, label:'07 — NCR SUITE' },
-      { p:.88, label:'08 — SENTINELLE' },
-      { p:.935, label:'09 — SST' },
-      { p:.985, label:'10 — AZZERA' }
-    ];
-    let currentChapter = chapterStops[0];
-    chapterStops.forEach((chapter) => { if (progress >= chapter.p - .018) currentChapter = chapter; });
+    let currentChapter = journeyChapters[0];
+    journeyChapters.forEach((chapter) => { if (progress >= chapter.p - .018) currentChapter = chapter; });
     if (sceneIndex) sceneIndex.textContent = currentChapter.label;
     if (journeyBar) journeyBar.style.height = `${progress * 100}%`;
     header?.classList.toggle('is-immersive', progress > .13 && progress < .93);
@@ -248,8 +269,6 @@
      - tactile : repositionnement doux après le geste
      - clavier : flèches, espace et PageUp/PageDown
   ------------------------------------------------------------------ */
-  const journeyStops = [0, .36, .535, .62, .705, .785, .825, .88, .935, .985, 1];
-
   function journeyMetrics() {
     if (!journey) return null;
     const top = journey.getBoundingClientRect().top + scrollY;
@@ -273,7 +292,7 @@
     return best;
   }
 
-  function scrollToJourneyProgress(targetProgress, duration = 820) {
+  function scrollToJourneyProgress(targetProgress, duration = 1020) {
     const metrics = journeyMetrics();
     if (!metrics || state.snapAnimating) return;
     const startY = scrollY;
@@ -281,7 +300,7 @@
     const distance = Math.abs(targetY - startY);
     if (distance < 2) return;
     const start = performance.now();
-    const resolvedDuration = clamp(duration + distance * .025, 620, 1080);
+    const resolvedDuration = clamp(duration + distance * .022, 900, 1320);
     state.snapAnimating = true;
     state.snapProgrammatic = true;
 
@@ -292,6 +311,7 @@
       if(t<1){requestAnimationFrame(tick);return;}
       scrollTo(0,targetY);
       state.snapAnimating=false;
+      state.snapCooldownUntil=performance.now()+320;
       requestAnimationFrame(()=>{state.snapProgrammatic=false;updateScrollTarget();});
     };
     requestAnimationFrame(tick);
@@ -309,23 +329,37 @@
       }
     }
     if (targetIndex < 0) return false;
-    scrollToJourneyProgress(journeyStops[targetIndex], direction > 0 ? 820 : 760);
+    scrollToJourneyProgress(journeyStops[targetIndex], direction > 0 ? 1040 : 960);
     return true;
   }
 
   addEventListener('wheel',(event)=>{
-    if(reducedMotion || !isJourneyScrollActive() || event.ctrlKey || event.metaKey) return;
+    if(reducedMotion || !isJourneyScrollActive() || event.ctrlKey || event.metaKey || !event.deltaY) return;
     const progress=readProgress();
     const direction=Math.sign(event.deltaY);
     if((direction<0 && progress<=.002) || (direction>0 && progress>=.998)) return;
+
+    /*
+      Un geste physique (molette ou trackpad) ne peut déclencher qu'un seul
+      chapitre. Les événements d'inertie restent absorbés jusqu'à ce que le
+      geste soit réellement terminé.
+    */
     event.preventDefault();
-    if(state.snapAnimating) return;
-    state.wheelAccumulator += event.deltaY;
-    const threshold = event.deltaMode===1 ? 3 : 34;
-    if(Math.abs(state.wheelAccumulator)<threshold) return;
+    clearTimeout(state.wheelGestureTimer);
+    state.wheelGestureTimer=setTimeout(()=>{
+      state.wheelGestureConsumed=false;
+      state.wheelAccumulator=0;
+    },220);
+
+    if(state.snapAnimating || performance.now()<state.snapCooldownUntil || state.wheelGestureConsumed) return;
+    const normalizedDelta=event.deltaMode===1 ? event.deltaY*18 : event.deltaY;
+    state.wheelAccumulator += normalizedDelta;
+    if(Math.abs(state.wheelAccumulator)<56) return;
+
     const moveDirection=Math.sign(state.wheelAccumulator);
     state.wheelAccumulator=0;
-    moveJourneyChapter(moveDirection);
+    state.wheelGestureConsumed=true;
+    if(!moveJourneyChapter(moveDirection)) state.wheelGestureConsumed=false;
   },{passive:false});
 
   addEventListener('keydown',(event)=>{
@@ -349,7 +383,7 @@
     if(Math.abs(delta)<28) return;
     const startIndex=nearestStopIndex(state.touchStartProgress);
     const targetIndex=clamp(startIndex+(delta>0?1:-1),0,journeyStops.length-1);
-    setTimeout(()=>scrollToJourneyProgress(journeyStops[targetIndex],780),35);
+    setTimeout(()=>scrollToJourneyProgress(journeyStops[targetIndex],980),35);
   },{passive:true});
 
   /* Sur les navigateurs sans geste intercepté, le scroll se recale au repos. */
@@ -361,8 +395,8 @@
       const progress=readProgress();
       if(progress<.006 || progress>.994) return;
       const index=nearestStopIndex(progress);
-      if(Math.abs(journeyStops[index]-progress)>.012) scrollToJourneyProgress(journeyStops[index],650);
-    },coarsePointer?190:135);
+      if(Math.abs(journeyStops[index]-progress)>.012) scrollToJourneyProgress(journeyStops[index],900);
+    },coarsePointer?240:210);
   },{passive:true});
 
   /* ------------------------------------------------------------------

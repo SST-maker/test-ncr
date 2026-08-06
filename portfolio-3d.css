@@ -1178,3 +1178,82 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   .journey { height: 500vh; }
 }
+
+
+/* ========================================================================== 
+   V5.5 — CORRECTIONS CIBLÉES SANS CHANGER LE CONCEPT
+   - un geste complet = un seul chapitre
+   - approche du robot décomposée en trois temps
+   - respiration renforcée sur les écrans d'ordinateur portable
+   ========================================================================== */
+.journey { height: 880vh; }
+
+/* Le titre conserve trois lignes nettes, sans collision verticale */
+.hero-copy { top: 50%; transform: translateY(-50%); }
+.hero-copy h1 {
+  font-size: clamp(3.75rem, 5.85vw, 6.85rem);
+  line-height: .95;
+  letter-spacing: -.048em;
+}
+.hero-copy h1 span + span { margin-top: .045em; }
+.hero-copy h1 .hero-title-accent {
+  font-size: .77em;
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+.hero-lead { margin-top: 1.25rem; line-height: 1.62; }
+
+/* Les changements de chapitre sont lisibles, pas instantanés */
+.showroom-card,
+.reveal-projects article {
+  transition:
+    opacity .48s ease,
+    transform .72s cubic-bezier(.18,.78,.2,1),
+    filter .42s ease,
+    box-shadow .48s ease;
+}
+
+/* La lumière de l'écran reste contenue pendant l'approche */
+.robot-screen-marker {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.46),
+    0 0 calc(8px + var(--screen-enter)*28px) rgba(41,151,255,.23),
+    inset 0 0 calc(22px + var(--screen-enter)*20px) rgba(41,151,255,.12);
+}
+
+@media (max-width: 1100px) {
+  .journey { height: 830vh; }
+  .hero-copy h1 { font-size: clamp(3.35rem, 5.9vw, 5.9rem); }
+}
+
+/* Écrans de MacBook : on réduit la hauteur occupée plutôt que de compresser */
+@media (min-width: 901px) and (max-height: 850px) {
+  .hero-copy { top: 51%; width: min(620px, 48vw); }
+  .hero-copy h1 { font-size: clamp(3.2rem, 5.15vw, 5.35rem); line-height: .97; }
+  .hero-lead { max-width: 540px; margin-top: .9rem; font-size: .96rem; line-height: 1.5; }
+  .hero-actions { margin-top: 1rem; }
+  .hero-meta { margin-top: .9rem; }
+  .hero-trustline { margin-top: .8rem; }
+  .scroll-cue { bottom: 64px; }
+}
+
+@media (max-width: 900px) {
+  .journey { height: 760vh; }
+  .hero-copy { transform: none; }
+  .hero-copy h1 { font-size: clamp(3.05rem, 7vw, 5.1rem); }
+}
+
+@media (max-width: 640px) {
+  .journey { height: 690vh; }
+  .hero-copy { top: 92px; }
+  .hero-copy h1 {
+    max-width: 98%;
+    font-size: clamp(2.55rem, 11vw, 3.85rem);
+    line-height: .98;
+  }
+  .hero-copy h1 .hero-title-accent { line-height: 1.02; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey { height: 500vh; }
+}
