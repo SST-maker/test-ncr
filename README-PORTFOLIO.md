@@ -1,25 +1,59 @@
-# Portfolio 3D immersif — N.C.R Solutions
+N.C.R SOLUTIONS — PORTFOLIO V4 PROPRE
+======================================
 
-Cette version remplace entièrement l’ancien portfolio.
+DIRECTION ARTISTIQUE
+--------------------
+Cette version reprend la V3 robot et reconstruit la séquence immersive autour
+d’un concept plus sobre :
 
-## Fonctionnement
+Robot NCR fidèle → écran du ventre → passage de verre minimal → showroom
+digital premium → révélation des projets réels.
 
-Le hero est une véritable scène WebGL composée de géométries 3D rendues en temps réel : arches cristallines, tunnel, éclairages, particules et caméra pilotée par la position du scroll.
+Le robot utilisé reste fidèle au fichier fourni. Sa silhouette et ses proportions
+ne sont pas redessinées. Une version HD du même visuel est utilisée uniquement
+pour éviter le flou pendant l’approche caméra.
 
-La scène ne dépend d’aucun CDN. `portfolio.html` fonctionne directement après extraction du ZIP. Le lanceur Mac fournit simplement un environnement local similaire à un hébergement web.
+OUVERTURE RECOMMANDÉE SUR MAC
+-----------------------------
+1. Décompresse entièrement le ZIP.
+2. Clic droit sur « Lancer le portfolio.command ».
+3. Choisis Ouvrir, puis confirme si macOS le demande.
+4. Laisse la fenêtre Terminal ouverte pendant le test.
 
-## Fichiers
+La page s’ouvre à l’adresse :
+http://127.0.0.1:8787/portfolio.html
 
-- `portfolio.html`
-- `portfolio-3d.css`
-- `portfolio-3d.js`
-- `assets/portfolio/`
-- `Lancer le portfolio.command`
+La page peut également être ouverte directement avec portfolio.html. La scène
+3D est autonome et ne dépend d’aucun CDN JavaScript.
 
-## Tests réalisés
+SÉQUENCE IMMERSIVE
+------------------
+1. « Entrez dans l’expérience digitale. »
+2. Approche progressive du robot NCR.
+3. Entrée exacte par l’écran de son ventre.
+4. Passage architectural en verre dépoli.
+5. Showroom blanc présentant la méthodologie.
+6. Sortie vers NCR Suite, Sentinelle Pro, l’application SST et les sites Azzera.
 
-- WebGL actif à 1440 × 900 et 390 × 844
-- aucun débordement horizontal
-- filtres opérationnels
-- fenêtres de projets opérationnelles
-- aucune erreur JavaScript relevée durant les tests
+PERFORMANCE
+-----------
+- géométries WebGL réduites et réutilisées ;
+- résolution plafonnée sur ordinateur et mobile ;
+- fréquence de rendu allégée sur mobile ;
+- réduction automatique de qualité sur les appareils plus lents ;
+- rendu suspendu lorsque la séquence n’est plus visible ;
+- compatibilité avec « Réduire les animations ».
+
+FICHIERS PRINCIPAUX
+-------------------
+- portfolio.html
+- portfolio-3d.css
+- portfolio-3d.js
+- assets/robot-ncr-hd.png
+- assets/portfolio/
+- Lancer le portfolio.command
+
+DÉPLOIEMENT
+-----------
+Téléverse le contenu du dossier à la racine de ton hébergement ou de ton dépôt.
+La page portfolio est accessible via /portfolio.html.
