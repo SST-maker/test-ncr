@@ -1075,3 +1075,106 @@ img { display: block; max-width: 100%; }
 }
 
 .showroom-card,.reveal-projects article { transition:opacity .32s ease,transform .42s cubic-bezier(.2,.75,.25,1),filter .25s ease; }
+
+
+/* ========================================================================== 
+   V5.4 — RYTHME NARRATIF, TITRES RESPIRANTS ET ENTRÉE ROBOT RECADRÉE
+   ========================================================================== */
+:root { scroll-behavior: auto; }
+.journey { height: 760vh; }
+.robot-stage { transform-origin: 54.2% 67.63%; }
+
+/* Hero : aucun chevauchement, largeur et interlignage maîtrisés */
+.hero-copy { width: min(660px, 49vw); }
+.hero-copy h1 {
+  max-width: 100%;
+  font-size: clamp(3.95rem, 6.15vw, 7.15rem);
+  line-height: .925;
+  letter-spacing: -.052em;
+  text-wrap: initial;
+}
+.hero-copy h1 span { display: block; width: fit-content; max-width: 100%; line-height: inherit; }
+.hero-copy h1 span + span { margin-top: .025em; }
+.hero-copy h1 .hero-title-accent {
+  color: var(--blue);
+  font-size: .76em;
+  line-height: .96;
+  letter-spacing: -.04em;
+}
+
+/* Tous les grands titres gagnent de l'air */
+.passage-copy h2,
+.showroom-copy h2,
+.reveal-copy h2,
+.section-heading h2,
+.proof-card h2,
+.cta-card h2 {
+  line-height: .96 !important;
+  letter-spacing: -.045em !important;
+}
+.passage-copy h2 br,
+.showroom-copy h2 br,
+.reveal-copy h2 br,
+.section-heading h2 br,
+.proof-card h2 br,
+.cta-card h2 br { content: ""; display: block; margin-bottom: .055em; }
+
+/* Entrée écran : lumière plus douce, disparition du robot plus propre */
+.robot-screen-marker {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.46),
+    0 0 calc(10px + var(--screen-enter)*34px) rgba(41,151,255,.25),
+    inset 0 0 calc(24px + var(--screen-enter)*24px) rgba(41,151,255,.13);
+}
+.robot-screen-marker::after {
+  transform: translateX(calc(-82% + var(--screen-enter)*112%)) rotate(-16deg);
+  opacity: calc(.16 + var(--screen-enter)*.58);
+}
+
+/* Les cartes séquencées restent lisibles pendant le snap */
+.showroom-card,
+.reveal-projects article {
+  transition:
+    opacity .38s ease,
+    transform .58s cubic-bezier(.18,.78,.2,1),
+    filter .35s ease,
+    box-shadow .4s ease;
+}
+.showroom-card.is-focus { transform: translate3d(0,0,0) scale(1) !important; }
+.reveal-projects article.is-focus { transform: translate3d(0,0,0) scale(1) !important; }
+
+/* Indication discrète que le parcours est chapitré */
+.scene-index span { min-height: 92px; }
+
+@media (max-width: 1100px) {
+  .hero-copy { width: min(610px, 52vw); }
+  .hero-copy h1 { font-size: clamp(3.55rem, 6.4vw, 6.2rem); }
+}
+
+@media (max-width: 900px) {
+  .journey { height: 710vh; }
+  .hero-copy { width: 58vw; }
+  .hero-copy h1 { font-size: clamp(3.25rem, 7.4vw, 5.35rem); }
+}
+
+@media (max-width: 640px) {
+  .journey { height: 650vh; }
+  .hero-copy { width: 100%; }
+  .hero-copy h1 {
+    max-width: 96%;
+    font-size: clamp(2.7rem, 11.6vw, 4.05rem);
+    line-height: .95;
+    letter-spacing: -.047em;
+  }
+  .hero-copy h1 .hero-title-accent { font-size: .79em; line-height: .99; }
+  .passage-copy h2,
+  .showroom-copy h2,
+  .reveal-copy h2,
+  .section-heading h2,
+  .proof-card h2,
+  .cta-card h2 { line-height: .99 !important; letter-spacing: -.038em !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey { height: 500vh; }
+}
